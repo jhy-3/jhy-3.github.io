@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="今天的论文题目是《Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks》 论文地址：https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;3548606.3560571">
+<meta property="og:type" content="article">
 <meta property="og:title" content="论文阅读_Videre">
 <meta property="og:url" content="http://example.com/2023/07/13/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Videre/index.html">
 <meta property="og:site_name" content="hibara">
+<meta property="og:description" content="今天的论文题目是《Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks》 论文地址：https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;3548606.3560571">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307140947904.png">
 <meta property="article:published_time" content="2023-07-13T09:06:50.000Z">
-<meta property="article:modified_time" content="2023-07-13T09:06:50.104Z">
+<meta property="article:modified_time" content="2023-07-14T01:49:56.967Z">
 <meta property="article:author" content="jhy">
+<meta property="article:tag" content="隐私保护">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307140947904.png">
 
 <link rel="canonical" href="http://example.com/2023/07/13/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Videre/">
 
@@ -185,6 +190,22 @@
 
               <time title="创建时间：2023-07-13 17:06:50" itemprop="dateCreated datePublished" datetime="2023-07-13T17:06:50+08:00">2023-07-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-14 09:49:56" itemprop="dateModified" datetime="2023-07-14T09:49:56+08:00">2023-07-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" itemprop="url" rel="index"><span itemprop="name">论文阅读</span></a>
+                </span>
+            </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -192,7 +213,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -211,7 +232,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <meta name="referrer" content="no-referrer">
+<p>今天的论文题目是《Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks》</p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.1145/3548606.3560571">https://dl.acm.org/doi/10.1145/3548606.3560571</a></p>
+<span id="more"></span>
+<h2 id="characterizing-and-detecting-non-consensual-photo-sharing-on-social-networks">Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</h2>
+<p>描述和检测社交网络上未经同意的照片共享</p>
+<p><strong>摘要：</strong> 在社交平台上，拍照和分享已成为日常活动。然而，在社交互动的娱乐背后，我们也在经历巨大的视觉侵犯和照片滥用问题。特别是，用户可能会在不知情的情况下被拍摄并在线曝光，这被称为非共识性分享问题。不幸的是，由于用户对自己的处境毫不知情，可能会被偷偷拍摄，因此这个问题无法通过主动访问控制或专门的旁观者检测来解决。我们提出了 Videre，代表那些在不知情的情况下被拍摄的人的隐私，在这样的照片公之于众之前，自动识别并警告他们。为此，我们首先通过深入的用户研究详细阐述了非共识性拍摄照片中遇到的主要特征。然后，我们为这个背景建立了一个数据集，并基于多深度特征融合构建了一个主动检测器作为分类器。为了减轻逐个识别不知情者的负担，我们进一步设计了一种基于签名的本地预授权过滤器，这也可以隐含地避免分类错误。我们在各种现场环境中实施并测试 Videre，以展示其有效性和性能。</p>
+<p><strong>问题介绍：</strong> 摄像头的普及促进了照片的快速发展，社交网络则推动了照片分享。前所未有的照片捕捉和分享活动将人们置于随时随地都可能被看到的尴尬境地，从而对其隐私构成严重威胁。即使谨慎的社交分享用户，也会不可避免地或无意识地被偷拍，这在本文被叫做 <strong>未经同意的照片分享问题</strong> 。如果与公众分享，就会不小心泄露他们的生活圈子和日常活动。更糟糕的是，这些照片可能会在社交网络和云服务器上迅速传播，使隐私泄露的范围更广、时间更长。</p>
+<p><strong>现存技术的问题：</strong> 人们已经探索了许多保护被拍照者隐私的技术手段，通常是通过防止照片被偷拍或设计访问策略来控制照片在社交网络上的传播。有的会要求用户主动参与，在照相设备上安装特定应用程序，已检测未经授权的照片捕获。这些建议无法扩展，因为它们不适用于传统相机，而且恶意摄影师可以通过禁用这些应用程序轻松绕过检测。</p>
+<p>在一项开创性的工作中，训练了一个机器学习模型来自动识别照片中的旁观者。然而，这两个术语/问题在定义上是不同的。&quot;旁观者 &quot;指的是没有被摄影者有意捕捉到的人（如图1中两张照片所示），而非自愿照片共享中的 &quot;不知情方 &quot;更广泛地指的是如果被捕捉到就更容易被侵犯隐私的人(如图1中中间两张照片所示)。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307140947904.png" alt="image-20230714094706768"></p>
+<p>因此，非自愿照片分享涵盖了更严重的、但以前被忽视的偷拍情况。</p>
+<p><strong>方案设计思路：</strong></p>
+<p><strong>本文贡献：</strong> 我们发现了未经同意的照片分享的可量化特征，并提出了一种对可能的违规分享行为敏感的自动检测器。从高层次来看，考虑到被无意识拍照的不可预测性（随时随地），该检测器将作为平台中的隐私保护代理反应性地工作，在必要时提醒用户，同时避免繁琐的事先设置。</p>
+<ul>
+<li>我们进行了一项真实世界的用户研究，对共享照片中的不可见性进行了主观描述，并发现眼睛注视方向和头部朝向构成了识别未经同意的照片共享的两个主要线索。</li>
+<li>我们建立了一个可公开获取的数据集，并对图片中每个人的不自觉性进行了精确的人工注释，以促进相关研究。</li>
+<li>我们提出了Videre的设计方案，通过训练一个多特征融合的机器学习分类器来检测不知情方。Videre通过在本地执行无证书聚合签名的预授权阶段来实现效率。</li>
+<li>我们进行了广泛的实验和实地调查来评估Videre的性能。</li>
+</ul>
+
     </div>
 
     
@@ -219,6 +260,9 @@
     
 
       <footer class="post-footer">
+           <div class="post-tags">
+              <a href="/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/" rel="tag"><i class="fa fa-tag"></i> 隐私保护</a>
+          </div>
 
         
 
@@ -288,6 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#characterizing-and-detecting-non-consensual-photo-sharing-on-social-networks"><span class="nav-number">1.</span> <span class="nav-text">Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -316,7 +361,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
