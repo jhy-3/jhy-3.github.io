@@ -213,7 +213,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.6k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -233,18 +233,22 @@
 
       
         <meta name="referrer" content="no-referrer">
-
 <p>今天的论文题目是《Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks》</p>
 <p>论文地址：<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.1145/3548606.3560571">https://dl.acm.org/doi/10.1145/3548606.3560571</a></p>
 <span id="more"></span>
-<h2 id="Characterizing-and-Detecting-Non-Consensual-Photo-Sharing-on-Social-Networks"><a href="#Characterizing-and-Detecting-Non-Consensual-Photo-Sharing-on-Social-Networks" class="headerlink" title="Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks"></a>Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</h2><p>描述和检测社交网络上未经同意的照片共享</p>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在社交平台上，拍照和分享已成为日常活动。然而，在社交互动的娱乐背后，我们也在经历巨大的视觉侵犯和照片滥用问题。特别是，用户可能会在不知情的情况下被拍摄并在线曝光，这被称为非共识性分享问题。不幸的是，由于用户对自己的处境毫不知情，可能会被偷偷拍摄，因此这个问题无法通过主动访问控制或专门的旁观者检测来解决。我们提出了 Videre，代表那些在不知情的情况下被拍摄的人的隐私，在这样的照片公之于众之前，自动识别并警告他们。为此，我们首先通过深入的用户研究详细阐述了非共识性拍摄照片中遇到的主要特征。然后，我们为这个背景建立了一个数据集，并基于多深度特征融合构建了一个主动检测器作为分类器。为了减轻逐个识别不知情者的负担，我们进一步设计了一种基于签名的本地预授权过滤器，这也可以隐含地避免分类错误。我们在各种现场环境中实施并测试 Videre，以展示其有效性和性能。</p>
-<h2 id="问题介绍"><a href="#问题介绍" class="headerlink" title="问题介绍"></a>问题介绍</h2><p>摄像头的普及促进了照片的快速发展，社交网络则推动了照片分享。前所未有的照片捕捉和分享活动将人们置于随时随地都可能被看到的尴尬境地，从而对其隐私构成严重威胁。即使谨慎的社交分享用户，也会不可避免地或无意识地被偷拍，这在本文被叫做 <strong>未经同意的照片分享问题</strong> 。如果与公众分享，就会不小心泄露他们的生活圈子和日常活动。更糟糕的是，这些照片可能会在社交网络和云服务器上迅速传播，使隐私泄露的范围更广、时间更长。</p>
-<h2 id="现存技术的问题"><a href="#现存技术的问题" class="headerlink" title="现存技术的问题"></a>现存技术的问题</h2><p>人们已经探索了许多保护被拍照者隐私的技术手段，通常是通过防止照片被偷拍或设计访问策略来控制照片在社交网络上的传播。有的会要求用户主动参与，在照相设备上安装特定应用程序，已检测未经授权的照片捕获。这些建议无法扩展，因为它们不适用于传统相机，而且恶意摄影师可以通过禁用这些应用程序轻松绕过检测。</p>
-<p>在一项开创性的工作中，训练了一个机器学习模型来自动识别照片中的旁观者。然而，这两个术语/问题在定义上是不同的。”旁观者 “指的是没有被摄影者有意捕捉到的人（如图1中两张照片所示），而非自愿照片共享中的 “不知情方 “更广泛地指的是如果被捕捉到就更容易被侵犯隐私的人(如图1中中间两张照片所示)。</p>
+<h2 id="characterizing-and-detecting-non-consensual-photo-sharing-on-social-networks">Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</h2>
+<p>描述和检测社交网络上未经同意的照片共享</p>
+<h2 id="摘要">摘要</h2>
+<p>在社交平台上，拍照和分享已成为日常活动。然而，在社交互动的娱乐背后，我们也在经历巨大的视觉侵犯和照片滥用问题。特别是，用户可能会在不知情的情况下被拍摄并在线曝光，这被称为非共识性分享问题。不幸的是，由于用户对自己的处境毫不知情，可能会被偷偷拍摄，因此这个问题无法通过主动访问控制或专门的旁观者检测来解决。我们提出了 Videre，代表那些在不知情的情况下被拍摄的人的隐私，在这样的照片公之于众之前，自动识别并警告他们。为此，我们首先通过深入的用户研究详细阐述了非共识性拍摄照片中遇到的主要特征。然后，我们为这个背景建立了一个数据集，并基于多深度特征融合构建了一个主动检测器作为分类器。为了减轻逐个识别不知情者的负担，我们进一步设计了一种基于签名的本地预授权过滤器，这也可以隐含地避免分类错误。我们在各种现场环境中实施并测试 Videre，以展示其有效性和性能。</p>
+<h2 id="问题介绍">问题介绍</h2>
+<p>摄像头的普及促进了照片的快速发展，社交网络则推动了照片分享。前所未有的照片捕捉和分享活动将人们置于随时随地都可能被看到的尴尬境地，从而对其隐私构成严重威胁。即使谨慎的社交分享用户，也会不可避免地或无意识地被偷拍，这在本文被叫做 <strong>未经同意的照片分享问题</strong> 。如果与公众分享，就会不小心泄露他们的生活圈子和日常活动。更糟糕的是，这些照片可能会在社交网络和云服务器上迅速传播，使隐私泄露的范围更广、时间更长。</p>
+<h2 id="现存技术的问题">现存技术的问题</h2>
+<p>人们已经探索了许多保护被拍照者隐私的技术手段，通常是通过防止照片被偷拍或设计访问策略来控制照片在社交网络上的传播。有的会要求用户主动参与，在照相设备上安装特定应用程序，已检测未经授权的照片捕获。这些建议无法扩展，因为它们不适用于传统相机，而且恶意摄影师可以通过禁用这些应用程序轻松绕过检测。</p>
+<p>在一项开创性的工作中，训练了一个机器学习模型来自动识别照片中的旁观者。然而，这两个术语/问题在定义上是不同的。&quot;旁观者 &quot;指的是没有被摄影者有意捕捉到的人（如图1中两张照片所示），而非自愿照片共享中的 &quot;不知情方 &quot;更广泛地指的是如果被捕捉到就更容易被侵犯隐私的人(如图1中中间两张照片所示)。</p>
 <p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307140947904.png" alt="image-20230714094706768"></p>
 <p>因此，非自愿照片分享涵盖了更严重的、但以前被忽视的偷拍情况。</p>
-<h2 id="方案设计思路"><a href="#方案设计思路" class="headerlink" title="方案设计思路"></a>方案设计思路</h2><p>我们首先进行了两项用户调查。其中一项调查的重点是研究共享照片中 <strong>主观感知的不可见性的主要特征</strong>。详细的观察结果有助于描述在未经同意的照片中可以统计发现的视觉线索的特征。另一个重点是研究用户对非自愿照片共享的行为偏好，这有助于我们建立用户习惯/体验的基线。</p>
+<h2 id="方案设计思路">方案设计思路</h2>
+<p>我们首先进行了两项用户调查。其中一项调查的重点是研究共享照片中 <strong>主观感知的不可见性的主要特征</strong>。详细的观察结果有助于描述在未经同意的照片中可以统计发现的视觉线索的特征。另一个重点是研究用户对非自愿照片共享的行为偏好，这有助于我们建立用户习惯/体验的基线。</p>
 <p>此外，我们还建立了一个带有未感知人物注释的照片数据集，以填补在此背景下缺乏相关数据资源的空白。</p>
 <p>最后，我们提出了Videre框架。简而言之，它利用用户研究中阐述的融合特征进行联合分类，以识别上传照片中的未意识到的个人，并使用<strong>基于签名的过滤器</strong>进行本地收集授权，减轻了人物分类的负担。</p>
 <p>调查特征——建立数据集——提出框架——分类过滤</p>
@@ -255,21 +259,31 @@
 <li>我们提出了Videre的设计方案，通过训练一个多特征融合的机器学习分类器来检测不知情方。Videre通过在本地执行无证书聚合签名的预授权阶段来实现效率。</li>
 <li>我们进行了广泛的实验和实地调查来评估Videre的性能。</li>
 </ul>
-<h2 id="问题动机"><a href="#问题动机" class="headerlink" title="问题动机"></a>问题动机</h2><h3 id="社交网络上的非自愿照片分享"><a href="#社交网络上的非自愿照片分享" class="headerlink" title="社交网络上的非自愿照片分享"></a>社交网络上的非自愿照片分享</h3><p>一般的照片分享行为过程如图1所示，基本涉及四类主体：</p>
+<h2 id="问题动机">问题动机</h2>
+<h3 id="社交网络上的非自愿照片分享">社交网络上的非自愿照片分享</h3>
+<p>一般的照片分享行为过程如图1所示，基本涉及四类主体：</p>
 <ul>
 <li>摄影师/照片分享者根据自己的兴趣爱好拍摄照片并提交到网络上</li>
 <li>被分享照片覆盖的个人</li>
 <li>接收提交照片并发布到网络空间的社交平台</li>
 <li>通过社交平台浏览并转发分享照片的浏览者</li>
 </ul>
-<h3 id="未感知方的定义"><a href="#未感知方的定义" class="headerlink" title="未感知方的定义"></a>未感知方的定义</h3><p>在我们的研究中，我们将未经同意的照片所描述的客观实体定义为 “未感知方”。从被拍摄者的角度来看，”未感知方 “指的是 “不知道自己被拍摄的人”，如图1中的照片②和③。</p>
-<h3 id="无意识方与旁观者的区别"><a href="#无意识方与旁观者的区别" class="headerlink" title="无意识方与旁观者的区别"></a>无意识方与旁观者的区别</h3><p>目前的研究协议根据人对照片的重要性和拍摄者的意图，将共享照片中的人分为两类，主体和旁观者。被偷拍者 “与 “旁观者 “之间不存在逻辑或因果关系，”被偷拍者 “的概念主要是指被偷拍者在拍照时的不知情状态，与是否为旁观者无关。而在这篇文章中，我们关注的是<strong>被偷拍者</strong> 。</p>
-<h3 id="设计目标"><a href="#设计目标" class="headerlink" title="设计目标"></a>设计目标</h3><p>未知情者的隐私更容易被侵犯，也更难保护，因此他们的隐私更值得关注。在本文中，我们将重点解决未经同意的照片分享问题</p>
-<h2 id="主要挑战"><a href="#主要挑战" class="headerlink" title="主要挑战"></a>主要挑战</h2><h3 id="如何描述不知情和有意识"><a href="#如何描述不知情和有意识" class="headerlink" title="如何描述不知情和有意识"></a>如何描述不知情和有意识</h3><p>对于共享照片中的当事人而言，”不知情 “或 “有意识 “等术语可能具有主观和微妙的解释，且因人而异。</p>
-<p>首先进行了一项用户研究，目的是列举这些认知的多样性。在这项研究中，参与者根据社会规范、过去的经验和图像中的视觉信息将一个人分为 “未意识到的一方 “或 “意识到的一方”。</p>
-<h3 id="如何自动识别未感知方"><a href="#如何自动识别未感知方" class="headerlink" title="如何自动识别未感知方"></a>如何自动识别未感知方</h3><p>建立自动分类器的前提是收集训练特征和标签。首先建立了一个人工标注的数据集，并且选择了一组与未觉察密切相关的视觉特征。为了实证检验这组视觉特征作为自动分类预测因子的有效性，我们分别使用不同的单一特征和由多种特征融合得到的新特征建立了几个分类器。从现实世界中的分享行为来看，大多数人都强烈希望在他人将包含自己的照片上传到社交网络之前征求自己的意见。为此，我们在调查了未知情者的分享偏好，并评估了对分享前咨询行为的接受程度，以建立用户习惯/体验基线。</p>
-<h2 id="Videre设计"><a href="#Videre设计" class="headerlink" title="Videre设计"></a>Videre设计</h2><p>我们为本研究进行了三项调查。第一项用户调查是关于未知方的预测功能。第二项调查是评估用户行为。最后一项调查是关于人在环设计的反馈。</p>
-<h3 id="调查设计"><a href="#调查设计" class="headerlink" title="调查设计"></a>调查设计</h3>
+<h3 id="未感知方的定义">未感知方的定义</h3>
+<p>在我们的研究中，我们将未经同意的照片所描述的客观实体定义为 “未感知方”。从被拍摄者的角度来看，&quot;未感知方 &quot;指的是 “不知道自己被拍摄的人”，如图1中的照片②和③。</p>
+<h3 id="无意识方与旁观者的区别">无意识方与旁观者的区别</h3>
+<p>目前的研究协议根据人对照片的重要性和拍摄者的意图，将共享照片中的人分为两类，主体和旁观者。被偷拍者 &quot;与 &quot;旁观者 &quot;之间不存在逻辑或因果关系，&quot;被偷拍者 &quot;的概念主要是指被偷拍者在拍照时的不知情状态，与是否为旁观者无关。而在这篇文章中，我们关注的是<strong>被偷拍者</strong> 。</p>
+<h3 id="设计目标">设计目标</h3>
+<p>未知情者的隐私更容易被侵犯，也更难保护，因此他们的隐私更值得关注。在本文中，我们将重点解决未经同意的照片分享问题</p>
+<h2 id="主要挑战">主要挑战</h2>
+<h3 id="如何描述不知情和有意识">如何描述不知情和有意识</h3>
+<p>对于共享照片中的当事人而言，&quot;不知情 &quot;或 &quot;有意识 &quot;等术语可能具有主观和微妙的解释，且因人而异。</p>
+<p>首先进行了一项用户研究，目的是列举这些认知的多样性。在这项研究中，参与者根据社会规范、过去的经验和图像中的视觉信息将一个人分为 &quot;未意识到的一方 &quot;或 “意识到的一方”。</p>
+<h3 id="如何自动识别未感知方">如何自动识别未感知方</h3>
+<p>建立自动分类器的前提是收集训练特征和标签。首先建立了一个人工标注的数据集，并且选择了一组与未觉察密切相关的视觉特征。为了实证检验这组视觉特征作为自动分类预测因子的有效性，我们分别使用不同的单一特征和由多种特征融合得到的新特征建立了几个分类器。从现实世界中的分享行为来看，大多数人都强烈希望在他人将包含自己的照片上传到社交网络之前征求自己的意见。为此，我们在调查了未知情者的分享偏好，并评估了对分享前咨询行为的接受程度，以建立用户习惯/体验基线。</p>
+<h2 id="videre设计">Videre设计</h2>
+<p>我们为本研究进行了三项调查。第一项用户调查是关于未知方的预测功能。第二项调查是评估用户行为。最后一项调查是关于人在环设计的反馈。</p>
+<h3 id="调查设计">调查设计</h3>
+
     </div>
 
     
@@ -352,7 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Characterizing-and-Detecting-Non-Consensual-Photo-Sharing-on-Social-Networks"><span class="nav-number">1.</span> <span class="nav-text">Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">2.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">问题介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E5%AD%98%E6%8A%80%E6%9C%AF%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">现存技术的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="nav-number">5.</span> <span class="nav-text">方案设计思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8A%A8%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">问题动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%9A%84%E9%9D%9E%E8%87%AA%E6%84%BF%E7%85%A7%E7%89%87%E5%88%86%E4%BA%AB"><span class="nav-number">6.1.</span> <span class="nav-text">社交网络上的非自愿照片分享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E6%84%9F%E7%9F%A5%E6%96%B9%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">6.2.</span> <span class="nav-text">未感知方的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%84%8F%E8%AF%86%E6%96%B9%E4%B8%8E%E6%97%81%E8%A7%82%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">6.3.</span> <span class="nav-text">无意识方与旁观者的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87"><span class="nav-number">6.4.</span> <span class="nav-text">设计目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%8C%91%E6%88%98"><span class="nav-number">7.</span> <span class="nav-text">主要挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E4%B8%8D%E7%9F%A5%E6%83%85%E5%92%8C%E6%9C%89%E6%84%8F%E8%AF%86"><span class="nav-number">7.1.</span> <span class="nav-text">如何描述不知情和有意识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E6%9C%AA%E6%84%9F%E7%9F%A5%E6%96%B9"><span class="nav-number">7.2.</span> <span class="nav-text">如何自动识别未感知方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Videre%E8%AE%BE%E8%AE%A1"><span class="nav-number">8.</span> <span class="nav-text">Videre设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E8%AE%BE%E8%AE%A1"><span class="nav-number">8.1.</span> <span class="nav-text">调查设计</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#characterizing-and-detecting-non-consensual-photo-sharing-on-social-networks"><span class="nav-number">1.</span> <span class="nav-text">Characterizing and Detecting Non-Consensual Photo Sharing on Social Networks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">2.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">问题介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E5%AD%98%E6%8A%80%E6%9C%AF%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">现存技术的问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="nav-number">5.</span> <span class="nav-text">方案设计思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8A%A8%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">问题动机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%9A%84%E9%9D%9E%E8%87%AA%E6%84%BF%E7%85%A7%E7%89%87%E5%88%86%E4%BA%AB"><span class="nav-number">6.1.</span> <span class="nav-text">社交网络上的非自愿照片分享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E6%84%9F%E7%9F%A5%E6%96%B9%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">6.2.</span> <span class="nav-text">未感知方的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%84%8F%E8%AF%86%E6%96%B9%E4%B8%8E%E6%97%81%E8%A7%82%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">6.3.</span> <span class="nav-text">无意识方与旁观者的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87"><span class="nav-number">6.4.</span> <span class="nav-text">设计目标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E6%8C%91%E6%88%98"><span class="nav-number">7.</span> <span class="nav-text">主要挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8F%8F%E8%BF%B0%E4%B8%8D%E7%9F%A5%E6%83%85%E5%92%8C%E6%9C%89%E6%84%8F%E8%AF%86"><span class="nav-number">7.1.</span> <span class="nav-text">如何描述不知情和有意识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E6%9C%AA%E6%84%9F%E7%9F%A5%E6%96%B9"><span class="nav-number">7.2.</span> <span class="nav-text">如何自动识别未感知方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#videre%E8%AE%BE%E8%AE%A1"><span class="nav-number">8.</span> <span class="nav-text">Videre设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%9F%A5%E8%AE%BE%E8%AE%A1"><span class="nav-number">8.1.</span> <span class="nav-text">调查设计</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
