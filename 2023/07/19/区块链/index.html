@@ -27,11 +27,14 @@
 <meta property="og:site_name" content="hibara">
 <meta property="og:description" content="区块链基础区块链究竟是什么？狭义地说，区块链就是比特币的底层技术；不过，经过7年的发展，区块链已经不再“依附于”比特币，而是独立地发展成为了一种革命性的技术，比特币则是区块链最大、最成功的应用。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307211709773.png">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307211718658.png">
 <meta property="article:published_time" content="2023-07-19T02:45:22.000Z">
-<meta property="article:modified_time" content="2023-07-20T12:14:38.925Z">
+<meta property="article:modified_time" content="2023-07-21T09:19:11.741Z">
 <meta property="article:author" content="jhy">
 <meta property="article:tag" content="区块链">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307211709773.png">
 
 <link rel="canonical" href="http://example.com/2023/07/19/%E5%8C%BA%E5%9D%97%E9%93%BE/">
 
@@ -193,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-20 20:14:38" itemprop="dateModified" datetime="2023-07-20T20:14:38+08:00">2023-07-20</time>
+                <time title="修改时间：2023-07-21 17:19:11" itemprop="dateModified" datetime="2023-07-21T17:19:11+08:00">2023-07-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,14 +214,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>3.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -257,7 +260,36 @@
 <p>ScriptSig：一个脚本的前一半</p>
 <p>脚本包含两个部分，一个签名和一个公钥，公钥属于交易输出的收款人，并且表明交易创建者允许收款人获得的输出金额；另一个部分是 ECDSA签名，是通过对交易的Hash值进行ECDSA签名而得到的。</p>
 <p>输出中包含了发送比特币的指令，金额（Value）是以聪（Satoshi,1BTC=100000000聪）为单位的数值。ScriptPubKey是脚本的另一半（这点将在后文中详细讨论），可以有多个输出，它们共享了输入金额。</p>
-
+<h3 id="交易类型"><a href="#交易类型" class="headerlink" title="交易类型"></a>交易类型</h3><p>根据目标地址的不同，可以把交易分为如下几种类型：</p>
+<ol>
+<li>支付到公钥Hash</li>
+</ol>
+<p>一个比特币地址只是一个Hash值，因而发送者无法在scriptPubKey 中提供完整的公钥，当要赎回比特币时，接收者需要同时提供签名scriptSig和公钥scriptPubKey，脚本系统会验证公钥的Hash值与scriptPubKey中的Hash值是否匹配，同时还会检查公钥和签名是否匹配。</p>
+<ol>
+<li>支付到脚本Hash</li>
+</ol>
+<p>该类交易非常有意义，未来应该会在某些场合频繁使用。该类交易的接受地址不是通常意义上的地址，而是一个多签地址，以3开头。比如，三对公钥对可以生成一个多签地址。</p>
+<p>地址以3开头，可以实现多方管理资产，极大地提高安全性，也可以轻松实现基于比特币原生的三方交易担保支付。一个m-of-n的模式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m &#123;pubkey&#125;...&#123;pubkey&#125; n OP<span class="emphasis">_CHECKMULTISIG</span></span><br></pre></td></tr></table></figure>
+<p>其中，m和n需要满足：1≤n≤20，m≤n。</p>
+<p>1 of 3，<strong>最大程度私钥冗余</strong>。防丢私钥损失，3把私钥中任意一把即可签名发币，即使丢失2把也可以保障不受损失。</p>
+<p>2 of 3，<strong>提高私钥冗余度的同时解决单点信任问题</strong>。3把私钥中的任 意2把私钥可签名发币，对于三方不完全信任的情形，即中介交易，非常适用。</p>
+<p>3 of 3，<strong>最大程度解决资金信任问题，无私钥冗余</strong>。必须3把私钥全部签名才能发币，适用于多方共同管理的重要资产，但是任何一方遗失私钥均会造成严重损失。</p>
+<ol>
+<li>挖矿交易</li>
+</ol>
+<p>挖矿（coinbase）交易用于凭空产生比特币。</p>
+<p>挖矿交易只有一个输 入，该输入有一个“coinbase”参数，没有scriptSig，“coinbase”中的数据可以是任意内容，它不会被使用。</p>
+<p>挖矿交易的输出金额在一段时间内是固定值，现在是12.5个比特币。输出地址可以是任何地址，一般是矿工或矿池的比特币地址。</p>
+<h3 id="找零地址"><a href="#找零地址" class="headerlink" title="找零地址"></a>找零地址</h3><p>在实际的交易中，假设A有一个比特币地址，并且包含着没有花费的10个比特币，B也有一个比特币地址，里面一分钱没有。当A向B支付10个比特币时，此时就不需要找零钱的问题。</p>
+<p>假设A的地址上有35个比特币（如图1-2所示），当A想向B支付8个 比特币时，如图所示，只需要使用包含着20个比特币的那一笔未消费支出，并设置好要支持的金额即可，剩下的12个比特币则会返回给A，以便A在将来可以继续使用。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307211709773.png" alt="image-20230721170933653"></p>
+<p>这样就有了一个找零机制，实际上，比特币在交易时会把消费时所用的地址（消费地址）的余额设置为零。当需要支付的金额小于可用余额时，在交易信息中必须告诉比特币网络零钱将要被发送至哪个地址， 即“找零地址”。找零地址可能是也可能不是原先的发送地址。</p>
+<p><strong>隐私的保证</strong> 根据设计，每一笔比特币交易将在一个称为“区块链”的全球性的公共总账上永久可见，这就意味着任何人随时都可以在上面进行跟踪查询。通过将某个比特币地址与其使用者关联起来，好事者都可以据此绘制关于这个人与他人之间的资金转移的关系图。但如果是将找回的零钱发送至一个<strong>新创建的地址</strong>，那么就可以让这种追踪变得更加困难。</p>
+<p>假设从地址A发送比特币到地址B后，零钱返回地址为A，则区块链会揭示地址A向地址B支付了一笔钱。 同样的道理，如果有两个或两个以上地址参与其中，任何涉及这个接收零钱的找零地址都会揭示A作为支付方的交易。假如某个控制着的任何接收地址或付款地址的人其身份是众所周知的，那么其他有过交易往来的各方的身份也有可能被推断出来。</p>
+<p>但加入说交易后的找零地址是新的C地址，如果没有更多的信息，其他人所能知道的，只有一个差分了地址A的余额至地址B和C，而地址B或C的主人可能是也可能不是A。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307211718658.png" alt="image-20230721171853609"></p>
+<h2 id="区块和区块链"><a href="#区块和区块链" class="headerlink" title="区块和区块链"></a>区块和区块链</h2>
     </div>
 
     
@@ -340,7 +372,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">区块链基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E5%90%88%E4%BA%A4%E6%98%93%E9%93%BE"><span class="nav-number">1.1.</span> <span class="nav-text">交易合交易链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E7%89%B9%E5%B8%81%E5%9C%B0%E5%9D%80"><span class="nav-number">1.1.1.</span> <span class="nav-text">比特币地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">交易的本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.3.</span> <span class="nav-text">输入和输出</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">区块链基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E5%90%88%E4%BA%A4%E6%98%93%E9%93%BE"><span class="nav-number">1.1.</span> <span class="nav-text">交易合交易链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E7%89%B9%E5%B8%81%E5%9C%B0%E5%9D%80"><span class="nav-number">1.1.1.</span> <span class="nav-text">比特币地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">交易的本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.3.</span> <span class="nav-text">输入和输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%98%93%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.4.</span> <span class="nav-text">交易类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%BE%E9%9B%B6%E5%9C%B0%E5%9D%80"><span class="nav-number">1.1.5.</span> <span class="nav-text">找零地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%9D%97%E5%92%8C%E5%8C%BA%E5%9D%97%E9%93%BE"><span class="nav-number">1.2.</span> <span class="nav-text">区块和区块链</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
