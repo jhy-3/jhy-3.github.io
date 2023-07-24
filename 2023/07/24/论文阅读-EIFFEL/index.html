@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="隐私集合求交">
-<meta property="og:url" content="http://example.com/2023/07/14/%E9%9A%90%E7%A7%81%E9%9B%86%E5%90%88%E6%B1%82%E4%BA%A4/index.html">
+  <meta name="description" content="今天的论文题目是《E FFeL: Ensuring Integrity For Federated Learning》 论文地址：https:&#x2F;&#x2F;doi.org&#x2F;10.1145&#x2F;3548606.3560611">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文阅读_EIFFEL">
+<meta property="og:url" content="http://example.com/2023/07/24/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-EIFFEL/index.html">
 <meta property="og:site_name" content="hibara">
+<meta property="og:description" content="今天的论文题目是《E FFeL: Ensuring Integrity For Federated Learning》 论文地址：https:&#x2F;&#x2F;doi.org&#x2F;10.1145&#x2F;3548606.3560611">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-14T02:04:05.000Z">
-<meta property="article:modified_time" content="2023-07-14T02:04:05.884Z">
+<meta property="article:published_time" content="2023-07-24T03:13:21.000Z">
+<meta property="article:modified_time" content="2023-07-24T07:37:28.530Z">
 <meta property="article:author" content="jhy">
+<meta property="article:tag" content="联邦学习">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/07/14/%E9%9A%90%E7%A7%81%E9%9B%86%E5%90%88%E6%B1%82%E4%BA%A4/">
+<link rel="canonical" href="http://example.com/2023/07/24/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-EIFFEL/">
 
 
 <script id="page-configurations">
@@ -43,7 +46,7 @@
   };
 </script>
 
-  <title>隐私集合求交 | hibara</title>
+  <title>论文阅读_EIFFEL | hibara</title>
   
 
 
@@ -160,7 +163,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/14/%E9%9A%90%E7%A7%81%E9%9B%86%E5%90%88%E6%B1%82%E4%BA%A4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/24/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-EIFFEL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/favicon1.png">
@@ -173,7 +176,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          隐私集合求交
+          论文阅读_EIFFEL
         </h1>
 
         <div class="post-meta">
@@ -182,8 +185,18 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-07-14 10:04:05" itemprop="dateCreated datePublished" datetime="2023-07-14T10:04:05+08:00">2023-07-14</time>
+              <time title="创建时间：2023-07-24 11:13:21 / 修改时间：15:37:28" itemprop="dateCreated datePublished" datetime="2023-07-24T11:13:21+08:00">2023-07-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" itemprop="url" rel="index"><span itemprop="name">论文阅读</span></a>
+                </span>
             </span>
 
           <br>
@@ -192,7 +205,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -211,7 +224,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <meta name="referrer" content="no-referrer">
+
+<p>今天的论文题目是《E FFeL: Ensuring Integrity For Federated Learning》</p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://doi.org/10.1145/3548606.3560611">https://doi.org/10.1145/3548606.3560611</a></p>
+<span id="more"></span>
+<h1 id="E-FFeL-Ensuring-Integrity-For-Federated-Learning"><a href="#E-FFeL-Ensuring-Integrity-For-Federated-Learning" class="headerlink" title="E FFeL: Ensuring Integrity For Federated Learning"></a>E FFeL: Ensuring Integrity For Federated Learning</h1><p>联邦学习（FL）使客户端能够与服务器协作训练机器学习模型。为了确保隐私，服务器对来自客户端的更新进行安全聚合。不幸的是，由于更新被掩盖，这使得无法验证更新的完整性。因此，可以在不被检测的情况下注入旨在毒化模型的畸形更新。在本文中，我们将联邦学习中更新隐私和完整性问题进行形式化，并提出了一种新的系统，EIFFeL，它能够实现已验证更新的安全聚合。EIFFeL是一个通用框架，可以实施任意完整性检查，并从聚合中移除畸形更新，同时不违反隐私。我们的实证评估证明了EIFFeL的实用性。例如，在有100个客户端和10%毒化的情况下，每次迭代仅需2.4秒，EIFFeL就可以训练出与非毒化联邦学习器相同精度的MNIST分类模型。</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>FL 的一个主要挑战是容易受到拜占庭攻击。特别是，恶意客户端可以向学习器注入有毒更新，目的是降低全局模型的准确性，或者在模型中植入后门，以便日后加以利用。</p>
+<p>FL 中的这些挑战引出了研究问题： 联合学习器如何在不侵犯客户隐私的情况下有效验证客户更新的完整性？</p>
+<p>我们提出了安全聚合验证输入（SAVI）协议，从而使这一问题正规化： (1) 安全验证每个本地更新的完整性，(2) 只聚合格式良好的更新，(3) 只以明文形式发布最终聚合。</p>
+<p>我们通过提出 EIFFeL 来证明 SAVI 的可行性：这是一个实例化 SAVI 协议的系统，它可以执行任何完整性检查，而这些检查可以用带有公共参数的算术电路来表示。</p>
+<h1 id="Problem-Overview"><a href="#Problem-Overview" class="headerlink" title="Problem Overview"></a>Problem Overview</h1><h2 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h2><p>在 FL 中，拥有分布式数据的多方共同训练一个全局模型 $M$，但彼此不会明确披露数据。FL 有两类参与者：</p>
+<ul>
+<li><p>Clients : n个客户端，$C_i$，拥有各自的数据集$D_i$，原始数据从不共享，相反，每个客户端通过私有数据集 $D_i$计算 M 的本地更新，如平均梯度。</p>
+</li>
+<li><p>Server:  有一个不受信任的服务器 S，它负责协调来自不同客户端的更新，以训练 M。</p>
+</li>
+</ul>
+<p>FL的一次训练迭代包括以下步骤：</p>
+<ul>
+<li><p>Boradcast: 服务器向所有客户端广播模型 M 的当前参数。</p>
+</li>
+<li><p>Local computation: 每个客户端 $C_i$本地计算更新</p>
+</li>
+<li>Aggregation: 服务器 S 收集客户端更新并将其聚合 $U=\sum _i \in[n] u_i$</li>
+<li>Global model update.服务器 S 根据聚合更新 U 更新全局模型 M。</li>
+</ul>
+<h2 id="goals-and-threat"><a href="#goals-and-threat" class="headerlink" title="goals and threat"></a>goals and threat</h2><ul>
+<li><p>输入隐私（客户目标）。第一个目标是确保隐私。除了从最终模型输出$U$ 中可以了解到的信息外，任何一方都不能了解到诚实客户端$C_i$的原始输入（更新）$u_i$ 的任何信息。</p>
+</li>
+<li><p>输入完整性（服务器的目标）。服务器$S$确保来自每个客户端的更新都是完整的。具体来说，服务器有一个公共验证谓词 Valid(-)，它定义了输入（更新）的语法。如果 Valid(𝑢) = 1，则输入（更新）𝑢 被视为有效，并因此通过完整性检查。</p>
+</li>
+</ul>
+<p>我们考虑恶意对手威胁模型：</p>
+<ul>
+<li><p>Malicious Server: 我们认为恶意服务器可以任意偏离协议，目的是恢复原始更新$u_i$</p>
+</li>
+<li><p>Malicious Clients: 恶意客户端可以任意偏离协议，其目标是 (1) 向服务器发送畸形输入，从而破坏最终聚合；(2) 不对提交格式良好更新的诚实客户端进行完整性检查；(3) 侵犯诚实客户端的隐私，可能与服务器串通一气。</p>
+</li>
+</ul>
+<h2 id="带有验证输入的安全聚合"><a href="#带有验证输入的安全聚合" class="headerlink" title="带有验证输入的安全聚合"></a>带有验证输入的安全聚合</h2><p><strong>定义1</strong> 给定验证$Valid(\cdot)$和安全参数$\kappa$，协议$Ⅱ(u_1…u_n)$，安全的聚合协议SAVI如下：</p>
+
     </div>
 
     
@@ -219,6 +272,9 @@
     
 
       <footer class="post-footer">
+           <div class="post-tags">
+              <a href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 联邦学习</a>
+          </div>
 
         
 
@@ -226,12 +282,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/07/13/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Videre/" rel="prev" title="论文阅读_Videre">
-      <i class="fa fa-chevron-left"></i> 论文阅读_Videre
+    <a href="/2023/07/21/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7/" rel="prev" title="数据完整性">
+      <i class="fa fa-chevron-left"></i> 数据完整性
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/07/18/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-Platypus/" rel="next" title="论文阅读_Platypus">
-      论文阅读_Platypus <i class="fa fa-chevron-right"></i>
+    <a href="/2023/07/24/%E6%8B%9C%E5%8D%A0%E5%BA%AD%E6%94%BB%E5%87%BB/" rel="next" title="拜占庭攻击">
+      拜占庭攻击 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -291,6 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#E-FFeL-Ensuring-Integrity-For-Federated-Learning"><span class="nav-number">1.</span> <span class="nav-text">E FFeL: Ensuring Integrity For Federated Learning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem-Overview"><span class="nav-number">3.</span> <span class="nav-text">Problem Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Setting"><span class="nav-number">3.1.</span> <span class="nav-text">Setting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#goals-and-threat"><span class="nav-number">3.2.</span> <span class="nav-text">goals and threat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%A6%E6%9C%89%E9%AA%8C%E8%AF%81%E8%BE%93%E5%85%A5%E7%9A%84%E5%AE%89%E5%85%A8%E8%81%9A%E5%90%88"><span class="nav-number">3.3.</span> <span class="nav-text">带有验证输入的安全聚合</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
