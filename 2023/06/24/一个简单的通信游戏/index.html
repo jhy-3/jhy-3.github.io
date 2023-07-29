@@ -20,16 +20,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="一个简单的通信游戏 我们给出密码学的第一个应用实例 这是个简单的问题，两个朋友Alice和Bob，他们在玩一个叫做抛硬币的游戏。 如果Alice对Bob说，“你选一面，我抛硬币并告诉你结果”，显然Bob不能同意，因为他不能验证抛硬币的结果。 为了解决这个问题，便有了这样的想法：">
+  <meta name="description" content="从本文开始，我们将开启密码学的历程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个简单的通信游戏">
 <meta property="og:url" content="http://example.com/2023/06/24/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%9A%E4%BF%A1%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="hibara">
-<meta property="og:description" content="一个简单的通信游戏 我们给出密码学的第一个应用实例 这是个简单的问题，两个朋友Alice和Bob，他们在玩一个叫做抛硬币的游戏。 如果Alice对Bob说，“你选一面，我抛硬币并告诉你结果”，显然Bob不能同意，因为他不能验证抛硬币的结果。 为了解决这个问题，便有了这样的想法：">
+<meta property="og:description" content="从本文开始，我们将开启密码学的历程。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202306251101064.png">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202307281952368.png">
 <meta property="article:published_time" content="2023-06-24T11:24:49.000Z">
-<meta property="article:modified_time" content="2023-06-29T02:28:05.865Z">
+<meta property="article:modified_time" content="2023-07-28T12:28:44.375Z">
 <meta property="article:author" content="jhy">
 <meta property="article:tag" content="密码学基础">
 <meta name="twitter:card" content="summary">
@@ -195,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-29 10:28:05" itemprop="dateModified" datetime="2023-06-29T10:28:05+08:00">2023-06-29</time>
+                <time title="修改时间：2023-07-28 20:28:44" itemprop="dateModified" datetime="2023-07-28T20:28:44+08:00">2023-07-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,7 +214,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>426</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -233,12 +234,14 @@
 
       
         <meta name="referrer" content="no-referrer">
+<p>从本文开始，我们将开启密码学的历程。</p>
+<span id="more"></span>
 <h1>一个简单的通信游戏</h1>
+<h2 id="第一个应用实例">第一个应用实例</h2>
 <p><strong>我们给出密码学的第一个应用实例</strong></p>
 <p>这是个简单的问题，两个朋友Alice和Bob，他们在玩一个叫做抛硬币的游戏。</p>
 <p>如果Alice对Bob说，“你选一面，我抛硬币并告诉你结果”，显然Bob不能同意，因为他不能验证抛硬币的结果。</p>
 <p>为了解决这个问题，便有了这样的想法：</p>
-<span id="more"></span>
 <p>为此我们先了解一个奇妙函数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">奇妙函数f</span><br><span class="line">1) 对任意整数x计算f(x)是容易的，给出f(x)计算x是不可能的</span><br><span class="line">2) 不可能找到一对整数(x,y)，满足x!=y且f(x)=f(y)</span><br></pre></td></tr></table></figure>
 <p>在这个基础上，我们可以得到第一个密码协议：</p>
@@ -246,6 +249,26 @@
 <p><strong>安全性分析</strong></p>
 <p>首先，由于性质2）Alice无法找到两个数x和y，其中一个是奇数另一个是偶数，满足<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)=f(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>，因此，一旦Alice告诉Bob<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span>的值，她就完成了抛硬币的过程。</p>
 <p>其次，由于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span>具有性质1），Bob不能判断Alice使用的x是奇数还是偶数，因此他不得不把其猜测真是地给出。</p>
+<p>虽然这个协议听上去十分简单，但它的确是一个合格的密码协议，因为协议中使用了现代密码学的一个基本要素——<strong>单向函数</strong>。</p>
+<h2 id="密码学的新作用-保证游戏的公平性">密码学的新作用——保证游戏的公平性</h2>
+<p>密码学一度曾为政府所独占，军事和外交部门使用它来保密消息。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307281952368.png" alt="img"></p>
+<p>图一：《模仿游戏》（The Imitation Game）是一部2014年英美合拍的历史剧情片。讲述英国数学家、逻辑学家、密码分析学家和计算机科学家艾伦·图灵在二战中帮助盟军破译纳粹德国的军事密码的真实故事。</p>
+<p>可是今天，密码学除了用于对信息进行保密外，还有一个新的用途：在有大量“玩家”的“游戏”中保证公平性，正如我们刚才讨论过的通信游戏。</p>
+<p>在一个娱乐场所进行判决可能不是一件大不了的事情，因而通过电话掷硬币来做决定只可能被看成是一种取乐的通信游戏。可是，有很多通信“游戏&quot;必须更加认真地对待。随着越来越多的事务处理和电子商务活动在开放的网络中以电子方式开展，我们通信中的许多实例将会涉及各种各样的“游戏&quot;。</p>
+<p>一般来说,这种“游戏”的“玩家&quot;往往彼此物理上相距很远，要依靠不安全的开放网络进行通信。物理距离和缺少安全性组合到一块儿，有助于和/或激励一些“玩家”(甚至一些未受邀请的玩家)以某种聪明的方式挫败游戏规则。违背规则的企图是为了获得某种未授权的优势，例如造成秘密信息的泄露、改变数据而不被发现、伪造证据、责任否认、破坏审计和信任、降低可用性或完全不提供服务等。现代通信在事务处理、商业运作、提供服务(以及很多其他方面，如公司业务、个人信息、军事活动和国家事务的保密)方面的重要性意味着要求不遵守游戏规则的玩家不应该获得任何未授权的优势。</p>
+<h1>密码系统和协议的准则</h1>
+<p>我们应当从一个基本的问题开始：什么是好的密码系统和协议？</p>
+<p>显然，这个问题不好答，各有各的说法，每个人对于好的定义是不一样的。有说难以计算的，有说不易察觉的。本博客的主要任务就是对这个基本问题给出更深入的答案。</p>
+<p>简单来说它应该有以下特点：</p>
+<ul>
+<li>保护的程度与应用需求相符合：不应该去设计过于复杂的密码系统来保护价值不匹配的信息，好的密码系统复杂程度应该刚刚好。</li>
+<li>对安全性的信心要依据所建立的“种系”：对于一个密码协议或系统，攻破它的困难性应该归结于某个困难的数学问题</li>
+<li>实际效率：我们所说的数学问题应该是高效可解的，该问题能在问题规模的多项式时间内可解。</li>
+<li>采用实际的和可用的原型和服务：</li>
+<li>明确性：要明确所需要的所有假定，要明确所提供的确切的安全服务，要明确数学方面的一些特殊情况</li>
+<li></li>
+</ul>
 
     </div>
 
@@ -329,7 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一个简单的通信游戏</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">一个简单的通信游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.1.</span> <span class="nav-text">第一个应用实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E6%96%B0%E4%BD%9C%E7%94%A8-%E4%BF%9D%E8%AF%81%E6%B8%B8%E6%88%8F%E7%9A%84%E5%85%AC%E5%B9%B3%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">密码学的新作用——保证游戏的公平性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">密码系统和协议的准则</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -345,7 +368,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
