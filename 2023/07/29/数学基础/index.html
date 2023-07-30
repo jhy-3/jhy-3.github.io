@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文介绍密码学中常用的一些符号和数学知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学基础">
+<meta property="og:url" content="http://example.com/2023/07/29/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="hibara">
+<meta property="og:description" content="本文介绍密码学中常用的一些符号和数学知识。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-29T12:18:25.000Z">
+<meta property="article:modified_time" content="2023-07-30T12:33:03.329Z">
+<meta property="article:author" content="jhy">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/07/29/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>数学基础 | hibara</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">hibara</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/29/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/favicon1.png">
+      <meta itemprop="name" content="jhy">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hibara">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-29 20:18:25" itemprop="dateCreated datePublished" datetime="2023-07-29T20:18:25+08:00">2023-07-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-30 20:33:03" itemprop="dateModified" datetime="2023-07-30T20:33:03+08:00">2023-07-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">信息安全数学基础</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <meta name="referrer" content="no-referrer">
+
+<p>本文介绍密码学中常用的一些符号和数学知识。</p>
+<span id="more"></span>
+<h1 id="标准符号"><a href="#标准符号" class="headerlink" title="标准符号"></a>标准符号</h1><p>$#S$，集合$S$中的元素数目</p>
+<p>$F_q$，q个元素的有限域</p>
+<p>$desc(A)$，代数结构A的描述</p>
+<p>$x\larr D$，根据分布$D$进行赋值</p>
+<p>$x\larr _US$，按$S$为均匀分布进行赋值</p>
+<p>$ord(x)$，群元素的阶</p>
+<p>$<g>$，由g生成的循环群</g></p>
+<h1 id="概率论和信息论"><a href="#概率论和信息论" class="headerlink" title="概率论和信息论"></a>概率论和信息论</h1><p>概率论和信息论是现代密码技术发展必不可少的工具。</p>
+<p>现代密码系统，特别是公钥密码系统，对概率行为的要求已经达到相当苛刻的程度：语义安全性。</p>
+<h2 id="概率论的基本概念"><a href="#概率论的基本概念" class="headerlink" title="概率论的基本概念"></a>概率论的基本概念</h2><p>令$S$为一个任意确定的点的集合,称之为概率空间(或样本空间)。任意元素$x\in S$称为样点(也称为结果、简单事件或不可分事件;为了简单我们将只用点)。一个事件(也称为合成事件或可分事件)是$S$的一个子集,通常用一个大写字母表示(比如$E$)。一次实验或观察是一种从$S$中产生(取出)一个点的动作。一个事件$E$的发生就是一个试验产生某个点$x\in S$,并满足:$x\in E$。</p>
+<p><strong>概率的经典定义</strong></p>
+<p>假设一个实验可以从$n=# S$个等可能的点中产生一个点，并且每次实验必须产生一个点。令$m$表示事件$E$包含的点的数目，那么$\frac{m}{n}$为事件$E$发生的概率，并记为$Prob[E]=\frac{m}{n}$</p>
+<p><strong>概率的统计定义</strong></p>
+<p>假设在相同条件下进行了$n$次实验，其中事件$E$发生了$\mu$次，如果对所有足够大的$n$，$\frac{\mu}{n}$保持不变，那么就是说事件$E$的概率为$\frac{\mu}{n}$，记为，$Prob[E]\approx \frac{\mu}{n}$</p>
+<h2 id="随机变量及其概率分布"><a href="#随机变量及其概率分布" class="headerlink" title="随机变量及其概率分布"></a>随机变量及其概率分布</h2><p>在密码学中，我们主要考虑定义在离散空间上的函数。设离散空间$S$包含有限个或者可数个孤立的点$x_1,…,$</p>
+<p><strong>离散随机变量及其分布函数</strong></p>
+<p>一个离散随机变量是一个实验的数字化结果。它是定义在样本空间上的函数</p>
+<p>设$S$为一个概率空间，$\xi$为一个随机变量。$\xi$的分布函数是$S\rarr R$的一个函数，以一个概率值$Prob[\xi=x_i]=p_i$</p>
+<h3 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h3><p>密码学中最常用的随机变量服从均匀分布：$Prob[\xi=x_i]=\frac{1}{ # S}$</p>
+<p>设$S$表示最长为$k$比特的非负数集合，依据均匀分布，从$S$中随机取出一个数，所取的数为k比特的概率是$\frac{1}{2}$</p>
+<h3 id="二项式分布"><a href="#二项式分布" class="headerlink" title="二项式分布"></a>二项式分布</h3><p>假定一个实验只有两个结果,记为“成功”和“失败”(例如,抛一枚硬币只有两个结果,“正面”和“反面”)。独立地重复进行该实验,如果每一次实验结果仅有两种可能的点，且它们的概率在整个实验过程中保持不变,那么这样的实验就称为贝努利试验(bernoulli trials)。</p>
+<p>假设在任何一次试验中：$Prob[Y]=p,Prob[N]=1-p$</p>
+<p>那么$Prob[n\ test,k\ N]=C_n^kp^k(1-p)^{n-k}$</p>
+<p>如果随机变量$\xi_n$取值为0，1，n，且对每一个p，$0&lt; p&lt;1$，有$Prob[\xi_n=k]=C_n^kp^k(1-p)^{n-k}$</p>
+<p>那么我们说$\xi _n$服从贝努利分布</p>
+<h2 id="生日悖论"><a href="#生日悖论" class="headerlink" title="生日悖论"></a>生日悖论</h2><p>对任意函数$f:X\rarr Y$，其中$Y$为包含n个元素的集合，我们来解决下面的问题：</p>
+<p>对于一个概率界限$\epsilon,0&lt;\epsilon&lt;1$，找一个整数$k$，使得对于$k$个两两互异的值$x_1,x_2,…,x_k\in_U X$，$k$个函数值$f(x_1),f(x_2),…,f(x_k)$对某些$i\ne j$有 $Prob[f(x_i)=f(x_j)]\ge \epsilon$</p>
+<p>即在$k$个函数值中，以不小于$\epsilon$的概率发生碰撞</p>
+<p>上述问题可以表示成：从装有$n$个不同颜色小球的袋子中去一个球，记下该球的颜色，然后放回。找到一个整数$k$，至少出现一次颜色匹配的概率为$\epsilon$。令$y_i$表示第$i$次取出的小球的颜色，第二次取出小球颜色不同的概率为$1-1/n$，以此类推，第$k$个球还未发生碰撞的概率为$(1-\frac{1}{n})(1-\frac{2}{n})…(1-\frac{k-1}{n})$</p>
+<p>当n足够大且x相对较小时$1+\frac{x}{n}=e^{\frac{x}{n}}$</p>
+<p>因此$(1-\frac{1}{n})(1-\frac{2}{n})…(1-\frac{k-1}{n})=e^{-\frac{k(k-1)}{2n}}$</p>
+<p>这是不碰撞的概率，因此碰撞的概率为$1-e^{-\frac{k(k-1)}{2n}}=\epsilon$</p>
+<p>我们有$k\approx \sqrt {2n\log \frac{1}{1-\epsilon}}$</p>
+<p>考虑$\epsilon=1/2$，则$k=1.1774\sqrt{n}$，它表示对于一个输出空间大小为$n$的随机函数，我们只需计算大约$\sqrt n$个函数值，就能以一个不可忽略的概率发现一个碰撞。</p>
+<p>如果说，我们将一组数据作为某个密码函数的原像隐藏，如果该数据的平方根不够大，那么就可以通过随即计算函数值来找出这组数据。这种攻击被称为<strong>生日攻击</strong>。它来源于：$n=365,k\approx22.49$，为了以大于50%的概率从房间中找到有两个人的生日相同，在该房间中只需有23人即可。</p>
+<h3 id="生日悖论的应用：指数计算的Pollard袋鼠算法"><a href="#生日悖论的应用：指数计算的Pollard袋鼠算法" class="headerlink" title="生日悖论的应用：指数计算的Pollard袋鼠算法"></a>生日悖论的应用：指数计算的Pollard袋鼠算法</h3><p>$p$为素数，$f(x)=g^x(mod\ p)$是一个随机函数，对于$x=1,2,..,p-1$，函数值$f(x)$在整数区间$[1,p-1]$范围内任意变化，这个函数具有单向性。求逆十分困难。</p>
+<p>在某些情况下，我们知道a和b，可以计算$f(a),f(a+1),…$在穷尽b-a步之前找到x。如果b-a太大，那么这种穷搜索方法不现实。但如果$\sqrt{b-a}$是一个容易处理的值，那么生日悖论在$\sqrt{b-a}$步求$f(x)$中起到作用。</p>
+<p>Pollard发现了这种方法，他称之为$\lambda$算法或袋鼠算法。</p>
+<p>Pollard用两个袋鼠描述他的算法，一只是驯养的袋鼠$T$，另一只是野生的袋鼠$W$，已知$f(x)=g^x(mod\ p)$求解x的问题可以模型化为$T$追捕$W$。这一点是通过让袋鼠沿着跳跃的方式完成的。</p>
+<p>$S=\{s(0),s(1),…,s(J-1)\}=\{2^0,2^1,…,2^{J-1}\}$</p>
+<p>袋鼠每一次跳跃的距离为$S$中随机的一个数，每只袋鼠都随身携带一个里程表来计算它跳过的总距离。</p>
+<p>$T$从已知点$t_0=g^b(mod\ p)$开始跳，$T$是驯服的袋鼠，它的路线为$t(i+1)=t(i)g^{s(t(i)mod\ J)}(mod\ p)$</p>
+<p>在跳了n此后，$T$携带的里程表记录着它目前跳过的距离$d(n)=\Sigma_{i=0}^ns(t(i)mod\ J)$</p>
+<p>我们将上面的表达式重新表达为$t(n)=g^{b+d(n-1)}mod\ p$</p>
+<p>$W$是野生的，它从一个未知的点$w_0=g^xmod\ p$，它的路线为$w(i+1)=w(i)g^{s(w(i)mod\ J)}(mod\ p)$</p>
+<p>$W$携带的里程表记录着它目前跳过的距离$D(j)=\Sigma_{k=0}^js(w_kmod\ J)$</p>
+<p>我们将上面的表达式重新表达为$w(i)=g^{x+D(i-1)}mod\ p$</p>
+<p>显然，它们的足迹$t(i)$和$w(j)$是两个随机函数，根据生日悖论，在$T$和$W$分别大约跳$n\approx\sqrt{b-a}$步内，发生碰撞，也就是跳在了同一个点。如果超过$n\approx\sqrt{b-a}$，那么碰撞发生的概率趋向于1.</p>
+<h2 id="信息论"><a href="#信息论" class="headerlink" title="信息论"></a>信息论</h2><p>香农关于消息源的熵(entropy)的定义用来衡量这个源所含信息量的多少。这个量度以源输出的所有可能的消息集上的概率分布函数形式给出。</p>
+<p>设$L={a_1,a_2,…,a_n}$为由n个不同符号组成的语言，假设信源$S$以独立的概率$Prob[a_1],Prob[a_2],…,Prob[a_n]$分别输出这些符号，并且满足$\Sigma_{i=1}^nProb[a_i]=1$</p>
+<p>S的熵为$H(S)=\Sigma_{i=1}^nProb[a_i]\log_2(\frac{1}{Prob[a_i]})$，我们称之为“每个信源输出的比特数”</p>
+<p>如果$S$以概率1输出某个符号，例如$a_1$，则熵函数$H(S)$有最小值0，这是因为$H(S)=Prob[a_1]\log_2(\frac{1}{Prob[a_1]})=\log_21=0$，这种情况说明，当我们确信信源$S$确定地仅输出$a_1$，我们没必要浪费比特来记录它。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+           <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/29/%E5%8F%AF%E8%AF%81%E6%98%8E%E5%AE%89%E5%85%A8/" rel="prev" title="可证明安全">
+      <i class="fa fa-chevron-left"></i> 可证明安全
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">标准符号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E4%BF%A1%E6%81%AF%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">概率论和信息论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">概率论的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">2.2.</span> <span class="nav-text">随机变量及其概率分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="nav-number">2.2.1.</span> <span class="nav-text">均匀分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%88%86%E5%B8%83"><span class="nav-number">2.2.2.</span> <span class="nav-text">二项式分布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%97%A5%E6%82%96%E8%AE%BA"><span class="nav-number">2.3.</span> <span class="nav-text">生日悖论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%97%A5%E6%82%96%E8%AE%BA%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9A%E6%8C%87%E6%95%B0%E8%AE%A1%E7%AE%97%E7%9A%84Pollard%E8%A2%8B%E9%BC%A0%E7%AE%97%E6%B3%95"><span class="nav-number">2.3.1.</span> <span class="nav-text">生日悖论的应用：指数计算的Pollard袋鼠算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E8%AE%BA"><span class="nav-number">2.4.</span> <span class="nav-text">信息论</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jhy"
+      src="/img/favicon1.png">
+  <p class="site-author-name" itemprop="name">jhy</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jhy</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
