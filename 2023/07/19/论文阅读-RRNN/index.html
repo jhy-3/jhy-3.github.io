@@ -231,18 +231,21 @@
 
       
         <meta name="referrer" content="no-referrer">
-
 <p>今天的论文题目是《Private and Reliable Neural Network Inference》</p>
 <p>论文地址：<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/pdf/10.1145/3548606.3560709">https://dl.acm.org/doi/pdf/10.1145/3548606.3560709</a></p>
 <span id="more"></span>
-<h1 id="Private-and-Reliable-Neural-Network-Inference"><a href="#Private-and-Reliable-Neural-Network-Inference" class="headerlink" title="Private and Reliable Neural Network Inference"></a>Private and Reliable Neural Network Inference</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>可靠的神经网络（NNs）提供了重要的推理时可靠性保证，如公平性和稳健性。与此相辅相成的是，保护客户数据隐私的神经网络推理。迄今为止，这两个新兴领域在很大程度上是相互独立的，但它们的结合将变得越来越重要。在这项工作中，我们提出了第一个在可靠神经网络上实现隐私保护推理的系统。我们的关键思路是为随机平滑的核心算法构建模块设计高效的全同态加密（FHE）对等体，随机平滑是获得可靠模型的一种最先进的技术。FHE中缺乏所需的控制流使得这项任务具有挑战性，因为简单的解决方案会导致无法接受的运行时间。</p>
+<h1>Private and Reliable Neural Network Inference</h1>
+<h2 id="摘要">摘要</h2>
+<p>可靠的神经网络（NNs）提供了重要的推理时可靠性保证，如公平性和稳健性。与此相辅相成的是，保护客户数据隐私的神经网络推理。迄今为止，这两个新兴领域在很大程度上是相互独立的，但它们的结合将变得越来越重要。在这项工作中，我们提出了第一个在可靠神经网络上实现隐私保护推理的系统。我们的关键思路是为随机平滑的核心算法构建模块设计高效的全同态加密（FHE）对等体，随机平滑是获得可靠模型的一种最先进的技术。FHE中缺乏所需的控制流使得这项任务具有挑战性，因为简单的解决方案会导致无法接受的运行时间。</p>
 <p>我们利用这些构建模块在一个名为Phoenix的系统中实现具有稳健性和公平性保证的隐私保护神经网络推理。在实验中，我们证明Phoenix在不产生过多延迟的情况下实现了其目标。据我们所知，这是第一个将客户数据隐私与神经网络的可靠性保证领域联系起来的研究。</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>鉴于数据隐私和可靠性这两个新兴方向的重要性，一个自然而然的问题出现了：在将机器学习模型过渡到隐私保护设置时，我们该如何保留可靠性保证？我们介绍一些例子来说明可靠性保证的必要性，并说明在保证客户端数据隐私的同时获得可靠性保证的重要性。</p>
+<h2 id="问题描述">问题描述</h2>
+<p>鉴于数据隐私和可靠性这两个新兴方向的重要性，一个自然而然的问题出现了：在将机器学习模型过渡到隐私保护设置时，我们该如何保留可靠性保证？我们介绍一些例子来说明可靠性保证的必要性，并说明在保证客户端数据隐私的同时获得可靠性保证的重要性。</p>
 <p>公平贷款资格。考虑金融机构在 MLaaS 环境中部署的 ML 系统，该系统可根据客户的财务记录自动预测贷款资格。最近的研究表明，如果不采取任何对策，这种模型可能会复制训练数据中的偏差并做出不公平的决定。例如，贷款申请可能会因为客户的敏感属性（如种族、年龄或性别）而被拒绝，也可能出现仅有细微差别的两对个人不公正地得到不同的结果。</p>
-<p> 稳健的医学图像分析 考虑医疗图像分析问题，患者数据（核磁共振成像、X 光或 CT 扫描）被用于癌症诊断、视网膜病变检测、肺病分类等。ML 算法越来越多地用于此类应用，以降低令人担忧的高医疗错误率 。作为云服务部署的这种算法可被医疗提供者用于辅助诊断，甚至被患者用作第二意见。然而，据观察，这种算法对输入数据的轻微扰动特别不稳定，这种扰动可能是由于恶意行为，如患者篡改报告以获取补偿，或自然发生的测量误差。由于此类扰动可能导致不必要的成本或对患者健康产生负面影响，因此云服务提供稳健性保证符合双方利益。</p>
+<p>稳健的医学图像分析 考虑医疗图像分析问题，患者数据（核磁共振成像、X 光或 CT 扫描）被用于癌症诊断、视网膜病变检测、肺病分类等。ML 算法越来越多地用于此类应用，以降低令人担忧的高医疗错误率 。作为云服务部署的这种算法可被医疗提供者用于辅助诊断，甚至被患者用作第二意见。然而，据观察，这种算法对输入数据的轻微扰动特别不稳定，这种扰动可能是由于恶意行为，如患者篡改报告以获取补偿，或自然发生的测量误差。由于此类扰动可能导致不必要的成本或对患者健康产生负面影响，因此云服务提供稳健性保证符合双方利益。</p>
 <p>提供可靠性保证的方法往往涉及额外的推理时间逻辑，这使得将计算提升到 FHE 以保护客户数据隐私的难度大大增加。Phoenix 首次在应对这一挑战方面迈出了重要一步，使可靠和隐私模型的部署成为可能。</p>
-<h2 id="Phoenix"><a href="#Phoenix" class="headerlink" title="Phoenix"></a>Phoenix</h2><p>Phoenix利用随机平滑生成具有推理时间可靠性保证的 ML 模型。在 FHE 中实现这一点的关键是将现有的在 FHE 中评估神经网络的技术与新的 FHE 结合起来。</p>
-<p><strong>Inference</strong> </p>
+<h2 id="phoenix">Phoenix</h2>
+<p>Phoenix利用随机平滑生成具有推理时间可靠性保证的 ML 模型。在 FHE 中实现这一点的关键是将现有的在 FHE 中评估神经网络的技术与新的 FHE 结合起来。</p>
+<p><strong>Inference</strong></p>
 
     </div>
 
@@ -326,7 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Private-and-Reliable-Neural-Network-Inference"><span class="nav-number">1.</span> <span class="nav-text">Private and Reliable Neural Network Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Phoenix"><span class="nav-number">1.3.</span> <span class="nav-text">Phoenix</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Private and Reliable Neural Network Inference</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.2.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phoenix"><span class="nav-number">1.3.</span> <span class="nav-text">Phoenix</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -342,7 +345,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
