@@ -29,9 +29,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308061536270.png">
 <meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308061547018.png">
-<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308061559341.png">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308061837905.png">
 <meta property="article:published_time" content="2023-06-27T03:08:31.000Z">
-<meta property="article:modified_time" content="2023-08-06T08:01:23.782Z">
+<meta property="article:modified_time" content="2023-08-06T10:45:45.690Z">
 <meta property="article:author" content="jhy">
 <meta property="article:tag" content="联邦学习">
 <meta name="twitter:card" content="summary">
@@ -197,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-06 16:01:23" itemprop="dateModified" datetime="2023-08-06T16:01:23+08:00">2023-08-06</time>
+                <time title="修改时间：2023-08-06 18:45:45" itemprop="dateModified" datetime="2023-08-06T18:45:45+08:00">2023-08-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,14 +215,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.4k</span>
+              <span>4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -275,9 +275,15 @@
 <h2 id="联邦学习的分类">联邦学习的分类</h2>
 <p>设矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">D_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>表示第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>个参与方的数据，设矩阵<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">D_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的每一行表示一个数据样本，每一列表示一个具体的数据特征（figure）。</p>
 <p>我们将特征空间设为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi></mrow><annotation encoding="application/x-tex">\chi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">χ</span></span></span></span>，数据标签（label）空间设为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span>，并用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi></mrow><annotation encoding="application/x-tex">I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span></span></span></span>表示数据样本ID空间，例如：在教育领域，数据标签可以是学生的成绩分数。三者组成了一个训练数据集<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>I</mi><mo separator="true">,</mo><mi>χ</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(I,\chi,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">χ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>。不同的参与方拥有的数据的特征空间和样本<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>D</mi></mrow><annotation encoding="application/x-tex">ID</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>空间是不同的。根据分布情况的不同，我们将联邦学习划分为<strong>横向联邦学习</strong>（Horizontal Fedrated Learning，HFL），<strong>纵向联邦学习（Vertica</strong>l Fedrated Learning，VFL）和<strong>联邦迁移学习</strong>（Fedrated Transfer Learning，VFL）</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202308061559341.png" alt="image-20230806155945304"></p>
-<center>图三：横向联邦学习（按样本划分的联邦学习）</center>
-<p>横向联邦学习适用于联邦学习的参与方的数据有重叠的数据特征，即数据特征在参与方之间是对齐的，但是参与方拥有的数据样本是不同的。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202308061837905.png" alt="image-20230806183730725"></p>
+<center>图三：联邦学习划分</center>
+<p>横向联邦学习适用于联邦学习的参与方的数据有重叠的数据特征，即数据特征在参与方之间是对齐的，但是参与方拥有的数据样本是不同的。它类似于在表格视图中将数据水平划分的情况。因此，我们将横向联邦学习称为按样本划分的联邦学习（Sample-Partitioned Fedrated learning）。</p>
+<p>与横向联邦学习不同，纵向联邦学习适用于联邦学习参与方的训练数据有重叠的数据样本，即参与方之间的数据样本是对齐的，但是在数据特征上有所不同。它类似于数据在表格视图中将数据垂直划分的情况。因此，我们将纵向联邦学习称为按特征划分的联邦学习（Feature-Partitioned Fedrated learning）。</p>
+<p>联邦迁移学习适用于参与方的数据样本和数据特征重叠都很少的情况。</p>
+<p>例如，当两家位于不同地区的银行，他们重叠的用户可能很少，但是由于具有相似的<strong>商业模式</strong>都具有相同的特征，这意味着，两家银行的数据特征重叠部分较大，那么就可以通过横向联邦学习建立一个机器学习模型。</p>
+<p>当两家公司（如银行和电子商务公司）提供不同的服务，但在客户群体上有非常大的交集时，它们可以在各自的不同特征空间上协作，为各自的到一个更好的机器学习模型。用户重叠部分较大，数据特征的重叠部分较小，则这两家公司可以协作地通过纵向联邦学习方式训练机器学习模型。</p>
+<h1>联邦学习的发展</h1>
+<p>在计算机科学和机器学习的发展史中，联邦学习的概念曾多次以不同的形式出现过，如：面向隐私保护的机器学习，协作式机器学习，联邦优化和面向隐私保护的数据分析。</p>
 
     </div>
 
@@ -361,7 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">人工智能面临的挑战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">联邦学习概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">联邦学习的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">联邦学习的分类</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">人工智能面临的挑战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">联邦学习概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">联邦学习的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">联邦学习的分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">联邦学习的发展</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
