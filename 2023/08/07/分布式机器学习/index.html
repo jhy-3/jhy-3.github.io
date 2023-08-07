@@ -25,11 +25,13 @@
 <meta property="og:url" content="http://example.com/2023/08/07/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="hibara">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308072017308.png">
 <meta property="article:published_time" content="2023-08-07T09:42:57.000Z">
-<meta property="article:modified_time" content="2023-08-07T11:42:15.537Z">
+<meta property="article:modified_time" content="2023-08-07T12:26:35.915Z">
 <meta property="article:author" content="jhy">
 <meta property="article:tag" content="联邦学习">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/jia-huaiyu/images/raw/master/202308072017308.png">
 
 <link rel="canonical" href="http://example.com/2023/08/07/%E5%88%86%E5%B8%83%E5%BC%8F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
 
@@ -215,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-08-07 17:42:57 / 修改时间：19:42:15" itemprop="dateCreated datePublished" datetime="2023-08-07T17:42:57+08:00">2023-08-07</time>
+              <time title="创建时间：2023-08-07 17:42:57 / 修改时间：20:26:35" itemprop="dateCreated datePublished" datetime="2023-08-07T17:42:57+08:00">2023-08-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>9</span>
+              <span>577</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,6 +258,16 @@
         <meta name="referrer" content="no-referrer">
 <span id="more"></span>
 <h1>分布式机器学习介绍</h1>
+<p>分布式机器学习也称为分布式学习，是指利用多个计算节点（也可称为工作者，worker）进行机器学习或者深度学习的算法和系统，旨在提高性能，保护隐私，并可扩展至更大规模的训练数据和更大的模型。如图所示。训练数据被分为不相交的数据分片并被发送给各个工作者，工作者将在本地执行随机梯度下降（Stochastic Gradient Descent，SGD）。工作者将梯度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><msup><mi>W</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">\nabla W^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.824664em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span></span></span></span></span></span></span>或者模型参数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>W</mi><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">W^i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.824664em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span></span></span></span></span></span></span>发送至服务器。参数服务器对收到的梯度或者模型参数进行聚合，从而得到全局梯度<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><mi>W</mi></mrow><annotation encoding="application/x-tex">\nabla W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span></span></span></span>或全局模型参数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span></span></span></span>。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202308072017308.png" alt="img"></p>
+<h1>面向扩展性的DML</h1>
+<h2 id="大规模机器学习">大规模机器学习</h2>
+<p>在大数据时代，ML面临的主要问题是如何处理大规模的高纬度数据集，随着大趋势的变化，ML社区正面临着计算性能和好事与数据规模不匹配的挑战，这使得大规模的训练样本中耗费合理的计算代价和时间进行学习变得愈加不可能。</p>
+<h3 id="内存短缺">内存短缺</h3>
+<p>传统ML方法只在一块独立内存中对训练样本进行所有的操作，因此，可能出现：训练模型可能不能收敛或性能低下（低准确率和召回率）。</p>
+<h3 id="不合理的训练时间">不合理的训练时间</h3>
+<p>ML算法中的一些优化过程可能不能匹配训练样本的规模。因此，当处理大规模训练样本时，在训练处理中耗费的时间可能过长，在模型训练过程中，如果需要尝试多种不同的参数设置，ML模型的超参调校也将耗费大量时间。</p>
+<h2 id="面向扩展性的dml">面向扩展性的DML</h2>
 
     </div>
 
@@ -339,7 +351,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">分布式机器学习介绍</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">分布式机器学习介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">面向扩展性的DML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E8%A7%84%E6%A8%A1%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.1.</span> <span class="nav-text">大规模机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%9F%AD%E7%BC%BA"><span class="nav-number">2.1.1.</span> <span class="nav-text">内存短缺</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%88%E7%90%86%E7%9A%84%E8%AE%AD%E7%BB%83%E6%97%B6%E9%97%B4"><span class="nav-number">2.1.2.</span> <span class="nav-text">不合理的训练时间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E6%89%A9%E5%B1%95%E6%80%A7%E7%9A%84dml"><span class="nav-number">2.2.</span> <span class="nav-text">面向扩展性的DML</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
