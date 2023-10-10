@@ -3301,4 +3301,27 @@ Y能够根据颜色精准判断X是否进行了交换<br>
     <url>/posts/64d2edde.html</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title>关于评价指标</title>
+    <url>/posts/58c2e786.html</url>
+    <content><![CDATA[<h1>关于评价指标</h1>
+<p>本文将介绍识别/匹配类论文中常出现的几种评价指标：TPR,FPR,TAR,FAR,FRR,ERR</p>
+<p>TPR：True Positive Rate，真阳性，分类器正确分类且本身为正例</p>
+<p>TNR：True Negative Rate，真阴性，分类器正确分类且本身为负例</p>
+<p>FPR：False Positive Rate，假阳性，分类器错误分类本身为负例</p>
+<p>FNR：False Negative Rate，假阴性，分类器错误分类本身为正例</p>
+<p>TPR=TP/(TP+FN),即正确识别的正例数据占据总的正例数据的比例，为召回率；</p>
+<p>FPR=FP/(FP+TN),即实际值为负例数据，将负例数据预测为正例的百分比；</p>
+<p><strong>ROC</strong></p>
+<p>ROC曲线（Receiver Operating Characteristic）：受试者工作特征曲线</p>
+<p>在分类任务中，我们使用分类器对样本进行分类，分类器会给出样本为正例的概率，我们可以针对此来设定一个阈值，当某个sample被判断为正例的概率大于这个阈值时，认为该sample为正例，小于则为负例。根据阈值-正负例概率，我们可以得到若干个(TPR , FPR)对。</p>
+<p>当阈值越大时，越多的样本被分为负例，而这些样本中其实也有正例的存在。这会导致TPR下降，FPR也下降（负类数据更不会被分为正例，但是影响要比TPR小，所以斜率呈上升趋势）。阈值越小时，越多的样本被分为正例，而这些样本中可能包含是正例，却被分为负例的样本以及是负例却被分为正例的样本，这样一来TPR上升（更多的正例样本被分为正例），FPR上升（更多的负例样本被分为正例，影响更大，所以斜率呈下降趋势）。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310101937999.png" alt="image-20231010193729959"></p>
+<p>TAR(True Accept Rate)表示正确接受比例，FAR(False Accept Rate)表示错误接受比例，所谓的接受比例可以表示说，在iot设备配对中，两个设备被认为是合法的配对。</p>
+<p>False Accept Rate：通过给定一个阈值T，如果两台设备的相似度大于T，则被认为同一成功配对，反之则为失败配对。无论将T设置为任何值，均会出现FAR一定的错误接受比例。但是，FAR越小，说明系统的匹配精确度越高。</p>
+<p>TAR：在比对设备匹配的时候，把相同环境/正确匹配识别正确的比例，即正确接受比例。相比于FAR相比，TAR越高意味着模型的鲁棒性越好。</p>
+<p>FRR：错误拒绝率，FRR=1-TAR</p>
+<p>EER：即等误率，即在某一值时，FRR=FAR</p>
+]]></content>
+  </entry>
 </search>
