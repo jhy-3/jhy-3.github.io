@@ -1966,17 +1966,6 @@ False ,MDC≠f(Ke,Data)
 ]]></content>
   </entry>
   <entry>
-    <title>横向联邦学习实战</title>
-    <url>/posts/a37f5aad.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>联邦学习</category>
-      </categories>
-      <tags>
-        <tag>联邦学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>盲签名</title>
     <url>/posts/4e6420da.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -3323,5 +3312,17 @@ Y能够根据颜色精准判断X是否进行了交换<br>
 <p>FRR：错误拒绝率，FRR=1-TAR</p>
 <p>EER：即等误率，即在某一值时，FRR=FAR</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Mastering Bitcoin</title>
+    <url>/posts/a37f5aad.html</url>
+    <content><![CDATA[<p>公认的区块链1.0的最好的书，在线阅读<a href="https://www.8btc.com/books/261/master_bitcoin/_book/">Mastering Bitcoin</a></p>
+]]></content>
+      <categories>
+        <category>区块链</category>
+      </categories>
+      <tags>
+        <tag>区块链</tag>
+      </tags>
   </entry>
 </search>
