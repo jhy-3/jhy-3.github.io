@@ -1,7 +1,0 @@
-/* 只在 about 页面显示背景图 */
-body.page-about {
-  background-image: url("/images/EVA1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
