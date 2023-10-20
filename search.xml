@@ -2174,6 +2174,50 @@ False ,MDC≠f(Ke,Data)
 <p><strong>在线客户端</strong></p>
 <p>在线客户端通过网页浏览器在第三方服务器上访问和储存该用户的钱包。</p>
 <h1>比特币的原理</h1>
+<p>与传统银行和支付系统不同，比特币系统是以去中心化信任为基础的。由于比特币网络中不存在中央权威信任机构，“信任”成为了比特币用户之间存在的一种突出特性。</p>
+<h2 id="比特币概述">比特币概述</h2>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310200944676.png" alt="image-20231020094420587"></p>
+<p>如图所示，比特币系统由以下构成：</p>
+<p>用户（用户通过密钥控制钱包）</p>
+<p>交易（每一笔交易都会被广播到整个比特币网络）</p>
+<p>矿工（通过竞争计算生成在每个节点达成共识的区块链，区块链是一个分布式的公共权威账簿，包含了比特币网络发生的所有的交易）</p>
+<h2 id="买咖啡的例子">买咖啡的例子</h2>
+<p>这是一个真实发生的买咖啡的例子：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">bitcoin:1GdK9UzpHBzqzX2A9JFP3Di4weBwqgmoQA?</span><br><span class="line">amount=0.015&amp;</span><br><span class="line">label=Bob%27s%20Cafe&amp;</span><br><span class="line">message=Purchase%20at%20Bob%27s%20Cafe</span><br></pre></td></tr></table></figure>
+<p>它的意思表示：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">A bitcoin address: &quot;1GdK9UzpHBzqzX2A9JFP3Di4weBwqgmoQA&quot;</span><br><span class="line">The payment amount: &quot;0.015&quot;</span><br><span class="line">A label for the recipient address: &quot;Bob&#x27;s Cafe&quot;</span><br><span class="line">A description for the payment: &quot;Purchase at Bob&#x27;s Cafe&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="比特币的交易">比特币的交易</h2>
+<p>交易告知全网：比特币的持有者已授权把比特币转帐给其他人。而新持有者能够再次授权，转移给该比特币所有权链中的其他人，产生另一笔交易来花掉这些比特币，后面的持有者在花费比特币也是用类似的方式。</p>
+<p>每笔交易包含多个输入或输出，输入是针对一个比特币账号的负债，输出被当成信用点数记入到比特币账户中。当输出累加略少于输入量时，两者的差额就代表了一笔隐含的“矿工费”，这也是将交易放进账簿的矿工所收集到的一笔小额支付。</p>
+<p>在比特币术语中，“消费”指的是签署一笔交易：转移一笔以前交易的比特币给以比特币地址所标识的新所有者。</p>
+<p>常见的交易形式：</p>
+<p>从一个地址到另一个地址的简单支付，一个交易包含一个输入和两个输出</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310201527156.png" alt="image-20231020152736091"></p>
+<p>集合多个输入到一个输出，相当于生活中很多零钱＋纸币兑换大额面钞</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310201528253.png" alt="image-20231020152840214"></p>
+<p>将一个输入分配给多个输出，即多个接收者的交易，可被用作商业实体分配资金</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310201533655.png" alt="image-20231020153350606"></p>
+<h2 id="交易的构建">交易的构建</h2>
+<p>钱包应用知道如何选取合适的输入和输出以建立Alice所希望的交易，A只需要输入地址和金额，其余的细节钱包应用会在后台自动完成。包应用甚至可以在完全离线时建立交易：比特币交易建立和签名时不用连接比特币网络，只有在执行交易时才需要将交易发送到网络。</p>
+<h3 id="获取正确的输入">获取正确的输入</h3>
+<p>Alice的钱包应用首先要找到一些足够支付给Bob所需金额的输入。如果钱包客户端没有某一未消费交易输出，它可以通过不同的服务者提供的各种API或完整索引节点的JSON PRC API从比特币网络中拿到这一交易信息。</p>
+<p>如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl https://blockchain.info/unspent?active=1Cdid9KFAaatwczBwBttQcwXYCpvK8h7FK</span><br></pre></td></tr></table></figure>
+<p>查找Alice的比特币地址所有的未消费的输出</p>
+<p>返回的响应数据</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;unspent_outputs&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;tx_hash&quot;</span>:<span class="string">&quot;186f9f998a5...2836dd734d2804fe65fa35779&quot;</span>,</span><br><span class="line">      <span class="string">&quot;tx_index&quot;</span>:104810202,</span><br><span class="line">      <span class="string">&quot;tx_output_n&quot;</span>:0,</span><br><span class="line">      <span class="string">&quot;script&quot;</span>:<span class="string">&quot;76a9147f9b1a7fb68d60c536c2fd8aeaa53a8f3cc025a888ac&quot;</span>,</span><br><span class="line">      <span class="string">&quot;value&quot;</span>:10000000,</span><br><span class="line">      <span class="string">&quot;value_hex&quot;</span>:<span class="string">&quot;00989680&quot;</span>,</span><br><span class="line">      <span class="string">&quot;confirmations&quot;</span>:0</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>A的地址：1Cdid9KFAaatwczBwBttQcwXYCpvK8h7FK</p>
+<p>含有一个未消费输出，价值是一千万聪（0.1btc）</p>
+<h3 id="创建交易输出">创建交易输出</h3>
+<p>Alice的交易输出会包含一个脚本，这个脚本说 “这个输出谁能拿出一个签名和Bob的公开地址匹配上，就支付给谁”。因为只有Bob的钱包的私钥可以匹配这个地址，所以只有Bob的钱包可以提供这个签名以兑换这笔输出。因此Alice会用需要Bob的签名来包装一个输出。</p>
+<p>第二个输出：因为Alice的金额是0.10比特币的输出形式，对0.015 比特币一杯的咖啡来说太多了，需要找Alice 0.085比特币的零钱。Alice钱包创建给她的零钱的支付就在付给Bob的同一个交易里面。</p>
+<p>Alice的钱包将她的金额分成了两个支付：一个给Bob，一个给自己。她可以在以后的交易里消费这笔零钱输出。</p>
+<p>最后，为了让这笔交易尽快地被网络处理，Alice的钱包会多付一小笔费用。这个不是明显地包含在交易中的；而是通过输入和输出的差值所<strong>隐含</strong>的。如果Alice的找零时0.0845btc，而不是0.1-0.015=0.085btc，这里就有剩下 0.0005btc（50万聪） 。因为加起来小到 0.10，所以这个 0.10 btc的输入就没有被完整的消费了。</p>
+<h2 id="比特币挖矿">比特币挖矿</h2>
+<p>这个交易现在在比特币网络上传播开来。但只有被一个称为挖矿的过程验证且加到一个区块中之后，这个交易才会成为这个共享账簿（区块链）的一部分。</p>
+<p>比特币系统的信任是建立在计算的基础上的。交易被包在一起放进区块中时需要极大的计算量来证明，但只需少量计算就能验证它们已被证明。</p>
+<p>▷ 挖矿在构建区块时会创造新的比特币，和一个中央银行印发新的纸币很类似。每个区块创造的比特币数量是固定的，随时间会渐渐减少。</p>
+<p>▷ 挖矿创建信任。挖矿确保只有在包含交易的区块上贡献了足够的计算量后，这些交易才被确认。区块越多，花费的计算量越大，意味着更多的信任。</p>
 ]]></content>
       <categories>
         <category>区块链</category>
@@ -3392,6 +3436,58 @@ Y能够根据颜色精准判断X是否进行了交换<br>
 <p>基于身份的加密（IBE）。基于身份的加密系统最早由Shamir[93]引入。IND-ID-CPA和IND-ID-CCA的安全模型在几篇文献中被定义（例如[24, 25]）。IND-sID-CCA的安全模型首次在[27, 28, 20]中被定义。类似于PKE，IBE的安全模型也有一些变种，如IND-ID-CCA1、IND-sID-CCA1、NM-ID-CPA、NM-ID-CCA1、NM-ID-CCA、NM-sID-CPA、SS-ID-CPA、SS-ID-CCA1、SS-ID-CCA和SS-sIDCPA。文献[6]表明，非篡改性仍然蕴含了任何类型攻击下的不可区分性，而语意安全性对于IBE仍然等价于不可区分性。[103, 56]中提出的更强的安全模型是为了捕捉IBE的抗泄漏安全性。</p>
 <h1>Foundations of Group-Based Cryptography</h1>
 <p>在本章中，我们介绍了一些数学基元，包括有限域、群和双线性配对，它们是基于群的密码学的基础。我们还描述了在方案构建中起重要作用的三种哈希函数。我们主要关注介绍基本操作的可行性和二进制表示的大小。</p>
+]]></content>
+      <categories>
+        <category>密码学基础</category>
+      </categories>
+      <tags>
+        <tag>密码学基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机数</title>
+    <url>/posts/7c9eec8d.html</url>
+    <content><![CDATA[<h1>安全随机数生成</h1>
+<p>在密码学中，随机性是不可或缺的一个角色。许多密码学算法都要求使用一个不可预测的随机数，只有在生成的随机数不可预测时，这些算法才可以保证足够的安全性。例如MAC 算法中的 key，ElGamal，ECC算法的k。</p>
+<p>另外许多高性能算法如快速排序，布隆过滤器都依赖于随机性，如果随机性可以被预测，或者能够找到特定的输入值使这些算法变慢，那么黑客就有攻击可循。</p>
+<h1>python随机数</h1>
+<p>在python中最简单方便的是使用random生成随机数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#需要的库</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment">#random.randint(a,b) 在[a,b]内生成随机数</span></span><br><span class="line">random.randint(<span class="number">1</span>,<span class="number">50</span>)<span class="comment">#随机生成最小值为1，最大值为50的整数（可以等于上下限）</span></span><br><span class="line">random.randint(<span class="number">20</span>, <span class="number">20</span>)  <span class="comment">#上下限一样时结果永远是20 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#random.randrange(a, b), random.randrange([start], stop[, step]), [a,b)</span></span><br><span class="line">random.randrange(<span class="number">0</span>, <span class="number">101</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#0-1之间的随机浮点数</span></span><br><span class="line">random.random() <span class="comment">#用于生成一个0到1的随机符点数: 0 &lt;= n &lt; 1.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#随机浮点数：random.uniform(a, b)</span></span><br><span class="line">random.uniform(<span class="number">1</span>, <span class="number">10</span>)  <span class="comment">#随机生成1到10之间的浮点数，可等于1或10</span></span><br><span class="line">random.uniform(<span class="number">10</span>, <span class="number">1</span>)  <span class="comment">#随机生成1到10之间的浮点数，可等于1或10</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>但很显然，这种随机数生成的方式并不安全。</p>
+<h1>PRNG 伪随机数生成器</h1>
+<p>Pseudo-Random Number Generators(PRNG) 是一种数字序列的生成算法，它生成出的数字序列的统计学属性跟真正的随机数序列非常相似，但它生成的伪随机数序列并不是真正的随机数序列！因为该序列完全依赖于提供给 PRNG 的初始值，这个值被称为 PRNG 的种子。</p>
+<p>PRNG的算法流程如下，每次迭代都会生成一个新的伪随机数。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202310201730008.png" alt="image-20231020173009855"></p>
+<p>实际上目前也有所谓的「硬件随机数生成器 TRNG」能生成出真正的随机数，但是因为 PRNG 的高速、低成本、可复现等原因，它仍然被大量使用在现代软件开发中。</p>
+<p>PRNG 的实现</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> hmac, hashlib</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">random_number_generator</span>(<span class="params">seed: <span class="built_in">bytes</span>, max_num: <span class="built_in">int</span></span>):</span><br><span class="line">  state = seed</span><br><span class="line">  counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    state = hmac.new(state, <span class="built_in">bytes</span>(counter), hashlib.sha1).digest()    </span><br><span class="line">    counter += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 这里取余实际上是压缩了信息，某种程度上说，这可以保证内部的真实状态 state 不被逆向出来</span></span><br><span class="line">    <span class="keyword">yield</span> <span class="built_in">int</span>.from_bytes(state, byteorder=<span class="string">&quot;big&quot;</span>) % max_num</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试下，计算 20 个 100 以内的随机数</span></span><br><span class="line">gen = random_number_generator(<span class="string">b&quot;abc&quot;</span>, <span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>([<span class="built_in">next</span>(gen) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>)])</span><br></pre></td></tr></table></figure>
+<p>如果初始的 PRNG 种子是完全不可预测的，PRNG 就能保证整个随机序列都不可预测。</p>
+<p>因此在 PRNG 中，生成出一个足够随机的种子，就变得非常重要了。</p>
+<h1>CSPRNG</h1>
+<p>Cryptography Secure Random Number Generators(CSPRNG) 是一种适用于密码学领域的 PRNG，一个 PRNG 如果能够具备如下两个条件，它就是一个 CSPRNG:</p>
+<ul>
+<li>能通过「下一比特测试 next-bit test」：即使有人获知了该 PRNG 的 k 位，他也无法使用合理的资源预测第 k+1 位的值</li>
+<li>如果攻击者猜出了 PRNG 的内部状态或该状态因某种原因而泄漏，攻击者也无法重建出内部状态泄漏之前生成的所有随机数</li>
+</ul>
+<p>有许多的设计都被证明可以用于构造一个 CSPRNG:</p>
+<ul>
+<li>基于计数器(CTR)模式下的<strong>安全<a href="https://zh.wikipedia.org/wiki/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81">分组密码</a></strong>、<strong><a href="https://zh.wikipedia.org/wiki/%E6%B5%81%E5%AF%86%E7%A0%81">流密码</a>**或**安全散列函数</strong>的 CSPRNG</li>
+<li>基于数论设计的 CSPRNG，它依靠整数分解问题（IFP）、离散对数问题（DLP）或椭圆曲线离散对数问题（ECDLP）的高难度来确保安全性</li>
+<li>CSPRNG 基于加密安全随机性的特殊设计，例如 Yarrow algorithm 和 Fortuna，这俩分别被用于 MacOS 和 FreeBSD.</li>
+</ul>
+<p>大多数的 CSPRNG 结合使用来自 OS 的熵与高质量的 PRNG，并且一旦系统生成了新的熵（这可能来自用户输入、磁盘 IO、系统中断、或者硬件 RNG），CSPRNG 会立即使用新的熵来作为 PRNG 新的种子。 这种不断重置 PRNG 种子的行为，使随机数变得非常难以预测。</p>
+<p>python中可以使用secrets模块来实现CSPRNG</p>
+<p>secrets模块：</p>
+<p>python的<code>secrets</code>库是在Python 3.6中引入的，它提供了生成加密安全随机数的函数。其中包括下面的几个函数：</p>
+<ul>
+<li><code>secrets.token_bytes(nbytes=None)</code>：返回一个指定长度的随机字节数组。</li>
+<li><code>secrets.token_hex(nbytes=None)</code>：返回一个指定长度的随机十六进制数字符串。</li>
+<li><code>secrets.token_urlsafe(nbytes=None)</code>：返回一个指定长度的随机URL安全的Base64编码字符串，去掉了’='字符。</li>
+</ul>
+<p>这些函数的实现使用的是安全的随机数发生器，因此生成的随机数可以用于密码学应用程序等需要高安全性的场合。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成一个指定长度的随机十六进制数字符串</span></span><br><span class="line"><span class="keyword">import</span> secrets</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(secrets.token_hex(<span class="number">16</span>))  <span class="comment"># 生成一个16字节的随机十六进制数字符串</span></span><br></pre></td></tr></table></figure>
+<p>使用 Python 实现一个简单但足够安全的随机密码生成器：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> string</span><br><span class="line"><span class="keyword">import</span> secrets</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义密码生成函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_password</span>(<span class="params">length: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="comment"># 定义所有可用的字符集合</span></span><br><span class="line">    alphabet = string.ascii_letters + string.digits + string.punctuation</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 secrets 模块生成随机密码</span></span><br><span class="line">    password = <span class="string">&#x27;&#x27;</span>.join(secrets.choice(alphabet) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> password</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数生成密码</span></span><br><span class="line">password = generate_password(<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(password)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>密码学基础</category>
