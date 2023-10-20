@@ -3447,7 +3447,8 @@ Y能够根据颜色精准判断X是否进行了交换<br>
   <entry>
     <title>随机数</title>
     <url>/posts/7c9eec8d.html</url>
-    <content><![CDATA[<h1>安全随机数生成</h1>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+<h1>安全随机数生成</h1>
 <p>在密码学中，随机性是不可或缺的一个角色。许多密码学算法都要求使用一个不可预测的随机数，只有在生成的随机数不可预测时，这些算法才可以保证足够的安全性。例如MAC 算法中的 key，ElGamal，ECC算法的k。</p>
 <p>另外许多高性能算法如快速排序，布隆过滤器都依赖于随机性，如果随机性可以被预测，或者能够找到特定的输入值使这些算法变慢，那么黑客就有攻击可循。</p>
 <h1>python随机数</h1>
