@@ -128,6 +128,31 @@ C=Flatten(\mu \cdot I_N+BitDecomp(R\cdot A))\in Z_q^{N\times N}</script><ul>
       </tags>
   </entry>
   <entry>
+    <title>LLM</title>
+    <url>/posts/d2609092.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><p>大语言模型（large language model，LLM）是一种语言模型，由具有许多参数的人工神经网络组成，使用<strong>自监督学习</strong>或<strong>半监督学习</strong>对未标记文本进行训练。</p>
+<span id="more"></span>
+<p><strong>大型语言模型被训练来解决通用（常见）的语言问题，如文本分类、问答、文档总结和文本生成等</strong>。</p>
+<p>（1）<strong>文本分类</strong>：大型语言模型可以通过对输入文本进行分析和学习，将其归类到一个或多个预定义的类别中。例如，可以使用大型语言模型来分类电子邮件是否为垃圾邮件，或将推文归类为积极、消极或中立。<br>（2）<strong>问答</strong>：大型语言模型可以回答用户提出的自然语言问题。例如，可以使用大型语言模型来回答搜索引擎中的用户查询，或者回答智能助手中的用户问题。<br>（3）<strong>文档总结</strong>：大型语言模型可以自动提取文本中的主要信息，以生成文档摘要或摘录。例如，可以使用大型语言模型来生成新闻文章的概要，或从长篇小说中提取关键情节和事件。<br>（4）<strong>文本生成</strong>：大型语言模型可以使用先前学习的模式和结构来生成新的文本。例如，可以使用大型语言模型来生成诗歌、短故事、或者以特定主题的文章。</p>
+<p><strong>大语言模型特征</strong></p>
+<p><strong>Large（大）</strong>：在”大语言模型”的上下文中，”大”主要有两层含义。一方面，它指的是模型的<strong>参数数量</strong>。在这些模型中，参数的数量通常会非常大，达到数十亿甚至数百亿。另一方面，”大”也指的是<strong>训练数据的规模</strong>。大语言模型通常在大规模的文本数据上进行训练。</p>
+<p><strong>General-purpose（通用）</strong>：这个词描述的是模型的应用范围。通用语言模型在训练时使用了来自各种领域的数据，因此它们能够处理各种类型的任务，不仅限于某一个特定的任务或领域。这使得这些模型在处理新的、未见过的任务时具有很强的泛化能力。</p>
+<p><strong>Pre-trained and fine-tuned（预训练和微调）</strong>：这是描述模型训练过程的关键词。在预训练阶段，模型在大规模的通用文本数据上进行训练，学习语言的基本结构和各种常识。然后，在<strong>微调阶段</strong>，模型在更小、更特定的数据集上进行进一步的训练。</p>
+<p><strong>大语言模型的好处</strong></p>
+<p><strong>单一模型可用于不同任务</strong>：由于大语言模型是通用的，并且具有强大的泛化能力，所以它们可以处理各种类型的任务，比如文本分类、命名实体识别、情感分析、问答系统、文本生成等。这意味着我们可以使用同一个预训练的模型来处理不同的任务，只需要进行相应的微调就可以。这大大减少了开发和维护不同模型的复杂性和成本。</p>
+<p><strong>微调过程只需要最小的数据</strong>：尽管大语言模型在预训练阶段需要大量的通用文本数据，但在微调阶段，它们通常只需要相对较小的领域特定数据。这是因为模型在预训练阶段已经学习了大量的语言知识和常识，微调阶段主要是让模型适应特定的任务或领域。这使得大语言模型能够在数据稀缺的领域中也能表现出色。</p>
+<p><strong>随着更多的数据和参数，性能持续提</strong>升：大语言模型的性能通常随着训练数据的增加和模型参数的增加而提升。这意味着，通过训练更大的模型，并使用更多的数据，我们可以获得更好的性能。这是因为更大的模型有更多的参数，能够学习和表示更复杂的模式；同时，更多的数据能够提供更丰富的信息，帮助模型更好地理解语言。</p>
+]]></content>
+      <categories>
+        <category>AI安全</category>
+      </categories>
+      <tags>
+        <tag>大语言模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>R1CS</title>
     <url>/posts/4cdf8b1a.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -257,31 +282,6 @@ C=\left(
       </tags>
   </entry>
   <entry>
-    <title>LLM</title>
-    <url>/posts/d2609092.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><p>大语言模型（large language model，LLM）是一种语言模型，由具有许多参数的人工神经网络组成，使用<strong>自监督学习</strong>或<strong>半监督学习</strong>对未标记文本进行训练。</p>
-<span id="more"></span>
-<p><strong>大型语言模型被训练来解决通用（常见）的语言问题，如文本分类、问答、文档总结和文本生成等</strong>。</p>
-<p>（1）<strong>文本分类</strong>：大型语言模型可以通过对输入文本进行分析和学习，将其归类到一个或多个预定义的类别中。例如，可以使用大型语言模型来分类电子邮件是否为垃圾邮件，或将推文归类为积极、消极或中立。<br>（2）<strong>问答</strong>：大型语言模型可以回答用户提出的自然语言问题。例如，可以使用大型语言模型来回答搜索引擎中的用户查询，或者回答智能助手中的用户问题。<br>（3）<strong>文档总结</strong>：大型语言模型可以自动提取文本中的主要信息，以生成文档摘要或摘录。例如，可以使用大型语言模型来生成新闻文章的概要，或从长篇小说中提取关键情节和事件。<br>（4）<strong>文本生成</strong>：大型语言模型可以使用先前学习的模式和结构来生成新的文本。例如，可以使用大型语言模型来生成诗歌、短故事、或者以特定主题的文章。</p>
-<p><strong>大语言模型特征</strong></p>
-<p><strong>Large（大）</strong>：在”大语言模型”的上下文中，”大”主要有两层含义。一方面，它指的是模型的<strong>参数数量</strong>。在这些模型中，参数的数量通常会非常大，达到数十亿甚至数百亿。另一方面，”大”也指的是<strong>训练数据的规模</strong>。大语言模型通常在大规模的文本数据上进行训练。</p>
-<p><strong>General-purpose（通用）</strong>：这个词描述的是模型的应用范围。通用语言模型在训练时使用了来自各种领域的数据，因此它们能够处理各种类型的任务，不仅限于某一个特定的任务或领域。这使得这些模型在处理新的、未见过的任务时具有很强的泛化能力。</p>
-<p><strong>Pre-trained and fine-tuned（预训练和微调）</strong>：这是描述模型训练过程的关键词。在预训练阶段，模型在大规模的通用文本数据上进行训练，学习语言的基本结构和各种常识。然后，在<strong>微调阶段</strong>，模型在更小、更特定的数据集上进行进一步的训练。</p>
-<p><strong>大语言模型的好处</strong></p>
-<p><strong>单一模型可用于不同任务</strong>：由于大语言模型是通用的，并且具有强大的泛化能力，所以它们可以处理各种类型的任务，比如文本分类、命名实体识别、情感分析、问答系统、文本生成等。这意味着我们可以使用同一个预训练的模型来处理不同的任务，只需要进行相应的微调就可以。这大大减少了开发和维护不同模型的复杂性和成本。</p>
-<p><strong>微调过程只需要最小的数据</strong>：尽管大语言模型在预训练阶段需要大量的通用文本数据，但在微调阶段，它们通常只需要相对较小的领域特定数据。这是因为模型在预训练阶段已经学习了大量的语言知识和常识，微调阶段主要是让模型适应特定的任务或领域。这使得大语言模型能够在数据稀缺的领域中也能表现出色。</p>
-<p><strong>随着更多的数据和参数，性能持续提</strong>升：大语言模型的性能通常随着训练数据的增加和模型参数的增加而提升。这意味着，通过训练更大的模型，并使用更多的数据，我们可以获得更好的性能。这是因为更大的模型有更多的参数，能够学习和表示更复杂的模式；同时，更多的数据能够提供更丰富的信息，帮助模型更好地理解语言。</p>
-]]></content>
-      <categories>
-        <category>AI安全</category>
-      </categories>
-      <tags>
-        <tag>大语言模型</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Sigma零知识证明协议</title>
     <url>/posts/8c0d2487.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -377,20 +377,6 @@ BulletProof\{0\le m_1+m_2-m_3\le2^{32},0\le m_3\le2^{32} \}</script><p>C对交�
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>crypto</title>
     <url>/posts/68282885.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -447,48 +433,18 @@ BulletProof\{0\le m_1+m_2-m_3\le2^{32},0\le m_3\le2^{32} \}</script><p>C对交�
       </tags>
   </entry>
   <entry>
-    <title>一个简单的通信游戏</title>
-    <url>/posts/f95d038c.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<p>从本文开始，我们将开启密码学的历程。</p>
-<span id="more"></span>
-<h1 id="一个简单的通信游戏"><a href="#一个简单的通信游戏" class="headerlink" title="一个简单的通信游戏"></a>一个简单的通信游戏</h1><h2 id="第一个应用实例"><a href="#第一个应用实例" class="headerlink" title="第一个应用实例"></a>第一个应用实例</h2><p><strong>我们给出密码学的第一个应用实例</strong></p>
-<p>这是个简单的问题，两个朋友Alice和Bob，他们在玩一个叫做抛硬币的游戏。</p>
-<p>如果Alice对Bob说，“你选一面，我抛硬币并告诉你结果”，显然Bob不能同意，因为他不能验证抛硬币的结果。</p>
-<p>为了解决这个问题，便有了这样的想法：</p>
-<p>为此我们先了解一个奇妙函数$f(x)$</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">奇妙函数f</span><br><span class="line">1) 对任意整数x计算f(x)是容易的，给出f(x)计算x是不可能的</span><br><span class="line">2) 不可能找到一对整数(x,y)，满足x!=y且f(x)=f(y)</span><br></pre></td></tr></table></figure>
-<p>在这个基础上，我们可以得到第一个密码协议：</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202306251101064.png" alt="game"></p>
-<p><strong>安全性分析</strong></p>
-<p>首先，由于性质2）Alice无法找到两个数x和y，其中一个是奇数另一个是偶数，满足$f(x)=f(y)$，因此，一旦Alice告诉Bob$f(x)$的值，她就完成了抛硬币的过程。</p>
-<p>其次，由于$f$具有性质1），Bob不能判断Alice使用的x是奇数还是偶数，因此他不得不把其猜测真是地给出。</p>
-<p>虽然这个协议听上去十分简单，但它的确是一个合格的密码协议，因为协议中使用了现代密码学的一个基本要素——<strong>单向函数</strong>。</p>
-<h2 id="密码学的新作用——保证游戏的公平性"><a href="#密码学的新作用——保证游戏的公平性" class="headerlink" title="密码学的新作用——保证游戏的公平性"></a>密码学的新作用——保证游戏的公平性</h2><p>密码学一度曾为政府所独占，军事和外交部门使用它来保密消息。</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307281952368.png" alt="img"></p>
-<p>图一：《模仿游戏》（The Imitation Game）是一部2014年英美合拍的历史剧情片。讲述英国数学家、逻辑学家、密码分析学家和计算机科学家艾伦·图灵在二战中帮助盟军破译纳粹德国的军事密码的真实故事。</p>
-<p>可是今天，密码学除了用于对信息进行保密外，还有一个新的用途：在有大量“玩家”的“游戏”中保证公平性，正如我们刚才讨论过的通信游戏。</p>
-<p>在一个娱乐场所进行判决可能不是一件大不了的事情，因而通过电话掷硬币来做决定只可能被看成是一种取乐的通信游戏。可是，有很多通信“游戏”必须更加认真地对待。随着越来越多的事务处理和电子商务活动在开放的网络中以电子方式开展，我们通信中的许多实例将会涉及各种各样的“游戏”。</p>
-<p>一般来说,这种“游戏”的“玩家”往往彼此物理上相距很远，要依靠不安全的开放网络进行通信。物理距离和缺少安全性组合到一块儿，有助于和/或激励一些“玩家”(甚至一些未受邀请的玩家)以某种聪明的方式挫败游戏规则。违背规则的企图是为了获得某种未授权的优势，例如造成秘密信息的泄露、改变数据而不被发现、伪造证据、责任否认、破坏审计和信任、降低可用性或完全不提供服务等。现代通信在事务处理、商业运作、提供服务(以及很多其他方面，如公司业务、个人信息、军事活动和国家事务的保密)方面的重要性意味着要求不遵守游戏规则的玩家不应该获得任何未授权的优势。</p>
-<h1 id="密码系统和协议的准则"><a href="#密码系统和协议的准则" class="headerlink" title="密码系统和协议的准则"></a>密码系统和协议的准则</h1><p>我们应当从一个基本的问题开始：什么是好的密码系统和协议？</p>
-<p>显然，这个问题不好答，各有各的说法，每个人对于好的定义是不一样的。有说难以计算的，有说不易察觉的。本博客的主要任务就是对这个基本问题给出更深入的答案。</p>
-<p>简单来说它应该有以下特点：</p>
-<ul>
-<li>保护的程度与应用需求相符合：不应该去设计过于复杂的密码系统来保护价值不匹配的信息，好的密码系统复杂程度应该刚刚好。</li>
-<li>对安全性的信心要依据所建立的“种系”：对于一个密码协议或系统，攻破它的困难性应该归结于某个困难的数学问题</li>
-<li>实际效率：我们所说的数学问题应该是高效可解的，该问题能在问题规模的多项式时间内可解。</li>
-<li>采用实际的和可用的原型和服务：</li>
-<li>明确性：要明确所需要的所有假定，要明确所提供的确切的安全服务，要明确数学方面的一些特殊情况</li>
-<li></li>
-</ul>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>密码学基础</category>
-      </categories>
-      <tags>
-        <tag>密码学基础</tag>
-      </tags>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -671,6 +627,156 @@ BulletProof\{0\le m_1+m_2-m_3\le2^{32},0\le m_3\le2^{32} \}</script><p>C对交�
       </tags>
   </entry>
   <entry>
+    <title>simulation</title>
+    <url>/posts/cbda467b.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+<p><strong>How To Simulate It – A Tutorial on the Simulation Proof Technique</strong></p>
+<p>本文将介绍如何通过模拟的思想去证明一个密码学系统的安全性。</p>
+<p>文档原文：<a href="https://eprint.iacr.org/2016/046.pdf">https://eprint.iacr.org/2016/046.pdf</a></p>
+<h1>Introduction</h1>
+<p>首先，我们需要理解什么是模拟–simulation。</p>
+<p>原文是这样描述的：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Simulation is a way of comparing what happens in the “real world” to what happens in an “ideal world” where the primitive in question is secure by definition. </span><br></pre></td></tr></table></figure>
+<p>也就是说，模拟是一种比较方式，将ideal world和real world进行比较。</p>
+<p>所谓的<strong>理想世界 (ideal world)</strong> 是一个理论模型，用于描述一个安全协议在理想条件下的行为。在这个模型中，存在一个被称为<strong>理想函数</strong>的抽象实体，它能够完美地执行协议应有的功能，而不会泄露任何额外的信息。同时，还有一个<strong>模拟器 (simulator)</strong>，它尝试模拟真实世界中敌手可能观察到的行为，但又不会使用任何真实的秘密信息。</p>
+<p>**现实世界（real world）**就是指我们设计和实施密码学协议的环境。现实世界中，协议需要与潜在的攻击者（Adversary）进行交互。</p>
+<p>这两个概念出现在UC（Universally Composable）安全框架中。在UC框架中，如果现实世界的协议能够被证明与理想世界中的理想功能等效，那么我们就可以说该协议是安全的。这意味着，即使在面对现实世界中的攻击者时，协议也能保持与理想功能相同的安全性。</p>
+<p>在理想世界中，既然对手什么也学不到，这就意味着在现实世界中，当对手收到密文时，也什么也学不到。</p>
+<p>原文提到了模拟器必须做的三个任务：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span>	It must generate a view for the real adversary that is indistinguishable from its real view;</span><br><span class="line"><span class="bullet">2.</span>	It must extract the effective inputs used by the adversary in the execution; and</span><br><span class="line"><span class="bullet">3.</span>	It must make the view generated be consistent with the output that is based on this input.</span><br></pre></td></tr></table></figure>
+<p>我们逐个分析一下：</p>
+<ol>
+<li>它必须为真实对手生成一个与其真实视图无法区分的视图。</li>
+</ol>
+<p>这里的“对手的视图”指的是对手通过分析交互过程中获得的信息所构建的关于系统状态的认知。简而言之，就是对手能够观察到的所有信息的集合。</p>
+<ol start="2">
+<li>它必须提取对手在执行过程中使用的有效输入。</li>
+</ol>
+<p>有效输入是指对手为了达到其目的而输入到系统中的数据，这些数据可能会影响系统的行为或输出。</p>
+<ol start="3">
+<li>必须使生成的视图与基于该输入的输出保持一致。</li>
+</ol>
+<p>这意味着模拟器生成的对手视图必须与对手在真实世界中根据其输入所期望的输出相匹配。</p>
+<h1>Preliminaries and Notation</h1>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊆</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><msup><mo stretchy="false">}</mo><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">S\subseteq \{0,1\}^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>：有限集合 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>，表示集合S是由0和1组成的所有可能字符串的子集。如果我们有一个集合S，它包含的元素是由0和1组成的字符串，那么这个集合S就可以被认为是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><msup><mo stretchy="false">}</mo><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">\{0,1\}^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>的子集。这里的“有限集合”意味着集合中的元素数量是可数的，也就是说，我们可以数出集合中有多少个元素。</p>
+<p>举几个例子：</p>
+<ul>
+<li>S = {0, 1}：这个集合包含两个元素，分别是字符串&quot;0&quot;和&quot;1&quot;。</li>
+<li>S = {00, 01, 10, 11}：这个集合包含所有长度为2的由0和1组成的字符串。</li>
+<li>S = {ε, 0, 01, 110, 1110}：这个集合包含空字符串ε（表示没有任何字符），以及其他几个由0和1组成的字符串。</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><msub><mo>∈</mo><mi>R</mi></msub><mi>S</mi></mrow><annotation encoding="application/x-tex">x\in_R S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6891em;vertical-align:-0.15em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">∈</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span></span></span></span>：表示 x 在集合 S 上均匀分布。</p>
+<p>具体来说，对于 <strong>{0,1}ⁿ</strong>，这个集合包含了所有可能的长度为 <strong>n</strong> 的二进制字符串。如果我们从这个集合中随机选择一个字符串，每个字符串被选中的概率都是 <strong>1/2ⁿ</strong>，因为总共有 <strong>2ⁿ</strong> 个可能的字符串。</p>
+<p>例如，如果 <strong>n=2</strong>，那么集合 <strong>{0,1}²</strong> 包含以下四个字符串：<strong>00</strong>、<strong>01</strong>、<strong>10</strong> 和 <strong>11</strong>。在均匀分布 <strong>U₂</strong> 下，选择这四个字符串中的任何一个的概率都是相同的，即 <strong>1/4</strong>。</p>
+<p>再比如，如果 <strong>n=3</strong>，那么集合 <strong>{0,1}³</strong> 就包含以下八个字符串：<strong>000</strong>、<strong>001</strong>、<strong>010</strong>、<strong>011</strong>、<strong>100</strong>、<strong>101</strong>、<strong>110</strong> 和 <strong>111</strong>。在均匀分布 <strong>U₃</strong> 下，选择这八个字符串中的任何一个的概率都是相同的，即 <strong>1/8</strong>。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mu(\cdot)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mopen">(</span><span class="mord">⋅</span><span class="mclose">)</span></span></span></span>：一个表示概率上可忽略函数</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p(\cdot)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">p</span><span class="mopen">(</span><span class="mord">⋅</span><span class="mclose">)</span></span></span></span>：正多项式</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>：空字符串</p>
+<p><strong>计算不可区分性</strong>（Computational Indistinguishability）：</p>
+<p>概率集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><msub><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">}</mo><mo separator="true">;</mo><mi>n</mi><mo>∈</mo><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">X={X(a,n)}_{a\in\{0,1\};n\in N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2247em;vertical-align:-0.47469999999999996em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2253em;"><span style="top:-2.4003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span><span class="mclose mtight">}</span><span class="mpunct mtight">;</span><span class="mord mathdefault mtight">n</span><span class="mrel mtight">∈</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47469999999999996em;"><span></span></span></span></span></span></span></span></span></span>是以<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><msup><mo stretchy="false">}</mo><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">a\in\{0,1\}^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>和<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">n\in N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>为索引的随机变量的无限序列。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>代表各方的输入，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>代表安全参数。</p>
+<p>有点抽象，举两个例子：</p>
+<p>假设我们有一个概率实验，它可以产生一个二进制字符串，比如抛硬币序列。对于每个二进制字符串</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></span></p>
+<p>和每个自然数</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>，我们定义一个随机变量</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(a,n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></p>
+<p>它可能代表在这个实验中得到字符串</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></span></p>
+<p>的概率，或者在</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>次实验中得到字符串</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span></span></p>
+<p>的次数。</p>
+<p>例如，如果我们抛一枚硬币两次，可能得到的二进制字符串有</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>00</mn><mo separator="true">,</mo><mn>01</mn><mo separator="true">,</mo><mn>10</mn><mo separator="true">,</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">00,01,10,11
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">1</span></span></span></span></span></p>
+<p>对于每个字符串和每个自然数</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>我们可以定义一个随机变量来表示在</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>次实验中得到该字符串的次数。所以，如果我们把</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>设为2，那么</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mn>00</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(00,2)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord">0</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span></span></p>
+<p>可能表示在两次实验中都得到正面的次数，</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mn>01</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(01,2)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord">0</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span></span></p>
+<p>表示得到一次正面一次反面的次数，以此类推。</p>
+<p>让我们考虑一个与天气相关的概率集合的例子。</p>
+<p>假设我们有一个随机变量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(a,n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，其中<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>是一个描述特定天气状况的字符串（例如 “晴天”、“雨天”、“多云” 等），而<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>是一个自然数，表示我们观察这种天气状况的天数。例如，如果我们关注的是 “晴天”，那么<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>就是 “晴天”，而<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>可以是任何自然数，比如 30。那么<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><msup><mo stretchy="false">(</mo><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mi>S</mi><mi>u</mi><mi>n</mi><mi>n</mi><msup><mi>y</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo separator="true">,</mo><mn>30</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">X(&#x27;Sunny&#x27;,30)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">0</span><span class="mclose">)</span></span></span></span>就代表在观察的 30 天内，出现 “晴天” 的天数。这个概率集合<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span>就包含了所有这些随机变量的无限序列，每个序列都与一个特定的天气状况和观察天数索引相关联。</p>
+<p>假设有两个这样的概率集合：</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><msub><mrow><mi>X</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">}</mo><mo separator="true">;</mo><mi>n</mi><mo>∈</mo><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">X={X(a,n)}_{a\in\{0,1\};n\in N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2247em;vertical-align:-0.47469999999999996em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2253em;"><span style="top:-2.4003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span><span class="mclose mtight">}</span><span class="mpunct mtight">;</span><span class="mord mathdefault mtight">n</span><span class="mrel mtight">∈</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47469999999999996em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo>=</mo><msub><mrow><mi>Y</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mrow><mi>a</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">}</mo><mo separator="true">;</mo><mi>n</mi><mo>∈</mo><mi>N</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Y={Y(a,n)}_{a\in\{0,1\};n\in N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2247em;vertical-align:-0.47469999999999996em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2253em;"><span style="top:-2.4003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight">0</span><span class="mpunct mtight">,</span><span class="mord mtight">1</span><span class="mclose mtight">}</span><span class="mpunct mtight">;</span><span class="mord mathdefault mtight">n</span><span class="mrel mtight">∈</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47469999999999996em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>如果对于每一个非统一多项式时间算法<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>，存在一个可忽略的函数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mu(\cdot)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mopen">(</span><span class="mord">⋅</span><span class="mclose">)</span></span></span></span>，使得对于每一个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><msup><mo stretchy="false">}</mo><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">a∈\{0,1\}^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose"><span class="mclose">}</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>和每一个<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">n∈N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>，都可以说<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo><mover><mo><mo>≡</mo></mo><mi>c</mi></mover></mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X\stackrel{c}{\equiv}Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.065142em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.065142em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">≡</span></span></span><span style="top:-3.6637500000000003em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>在计算上是无差别的，用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo><mover><mo><mo>≡</mo></mo><mi>c</mi></mover></mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">X\stackrel{c}{\equiv}Y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.065142em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.065142em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">≡</span></span></span><span style="top:-3.6637500000000003em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span>表示：</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>P</mi><mi>r</mi><mo stretchy="false">[</mo><mi>D</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo stretchy="false">]</mo><mo>−</mo><mi>P</mi><mi>r</mi><mo stretchy="false">[</mo><mi>D</mi><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo stretchy="false">]</mo><mo>≤</mo><mi>μ</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|Pr[D(X(a,n))=1]-Pr[D(Y(a,n))=1] \le \mu(n)|
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mord">∣</span></span></span></span></span></p>
+<p>原文中强调了：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">All parties are assumed to run in time that is polynomial in the security parameter.</span><br></pre></td></tr></table></figure>
+<p>这段话强调了在设计密码学算法时，需要考虑算法的效率和安全性，确保算法在可接受的时间内运行，同时保持足够的安全性。</p>
+]]></content>
+      <categories>
+        <category>密码学基础</category>
+      </categories>
+      <tags>
+        <tag>密码学基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个简单的通信游戏</title>
+    <url>/posts/f95d038c.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p>从本文开始，我们将开启密码学的历程。</p>
+<span id="more"></span>
+<h1 id="一个简单的通信游戏"><a href="#一个简单的通信游戏" class="headerlink" title="一个简单的通信游戏"></a>一个简单的通信游戏</h1><h2 id="第一个应用实例"><a href="#第一个应用实例" class="headerlink" title="第一个应用实例"></a>第一个应用实例</h2><p><strong>我们给出密码学的第一个应用实例</strong></p>
+<p>这是个简单的问题，两个朋友Alice和Bob，他们在玩一个叫做抛硬币的游戏。</p>
+<p>如果Alice对Bob说，“你选一面，我抛硬币并告诉你结果”，显然Bob不能同意，因为他不能验证抛硬币的结果。</p>
+<p>为了解决这个问题，便有了这样的想法：</p>
+<p>为此我们先了解一个奇妙函数$f(x)$</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">奇妙函数f</span><br><span class="line">1) 对任意整数x计算f(x)是容易的，给出f(x)计算x是不可能的</span><br><span class="line">2) 不可能找到一对整数(x,y)，满足x!=y且f(x)=f(y)</span><br></pre></td></tr></table></figure>
+<p>在这个基础上，我们可以得到第一个密码协议：</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202306251101064.png" alt="game"></p>
+<p><strong>安全性分析</strong></p>
+<p>首先，由于性质2）Alice无法找到两个数x和y，其中一个是奇数另一个是偶数，满足$f(x)=f(y)$，因此，一旦Alice告诉Bob$f(x)$的值，她就完成了抛硬币的过程。</p>
+<p>其次，由于$f$具有性质1），Bob不能判断Alice使用的x是奇数还是偶数，因此他不得不把其猜测真是地给出。</p>
+<p>虽然这个协议听上去十分简单，但它的确是一个合格的密码协议，因为协议中使用了现代密码学的一个基本要素——<strong>单向函数</strong>。</p>
+<h2 id="密码学的新作用——保证游戏的公平性"><a href="#密码学的新作用——保证游戏的公平性" class="headerlink" title="密码学的新作用——保证游戏的公平性"></a>密码学的新作用——保证游戏的公平性</h2><p>密码学一度曾为政府所独占，军事和外交部门使用它来保密消息。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202307281952368.png" alt="img"></p>
+<p>图一：《模仿游戏》（The Imitation Game）是一部2014年英美合拍的历史剧情片。讲述英国数学家、逻辑学家、密码分析学家和计算机科学家艾伦·图灵在二战中帮助盟军破译纳粹德国的军事密码的真实故事。</p>
+<p>可是今天，密码学除了用于对信息进行保密外，还有一个新的用途：在有大量“玩家”的“游戏”中保证公平性，正如我们刚才讨论过的通信游戏。</p>
+<p>在一个娱乐场所进行判决可能不是一件大不了的事情，因而通过电话掷硬币来做决定只可能被看成是一种取乐的通信游戏。可是，有很多通信“游戏”必须更加认真地对待。随着越来越多的事务处理和电子商务活动在开放的网络中以电子方式开展，我们通信中的许多实例将会涉及各种各样的“游戏”。</p>
+<p>一般来说,这种“游戏”的“玩家”往往彼此物理上相距很远，要依靠不安全的开放网络进行通信。物理距离和缺少安全性组合到一块儿，有助于和/或激励一些“玩家”(甚至一些未受邀请的玩家)以某种聪明的方式挫败游戏规则。违背规则的企图是为了获得某种未授权的优势，例如造成秘密信息的泄露、改变数据而不被发现、伪造证据、责任否认、破坏审计和信任、降低可用性或完全不提供服务等。现代通信在事务处理、商业运作、提供服务(以及很多其他方面，如公司业务、个人信息、军事活动和国家事务的保密)方面的重要性意味着要求不遵守游戏规则的玩家不应该获得任何未授权的优势。</p>
+<h1 id="密码系统和协议的准则"><a href="#密码系统和协议的准则" class="headerlink" title="密码系统和协议的准则"></a>密码系统和协议的准则</h1><p>我们应当从一个基本的问题开始：什么是好的密码系统和协议？</p>
+<p>显然，这个问题不好答，各有各的说法，每个人对于好的定义是不一样的。有说难以计算的，有说不易察觉的。本博客的主要任务就是对这个基本问题给出更深入的答案。</p>
+<p>简单来说它应该有以下特点：</p>
+<ul>
+<li>保护的程度与应用需求相符合：不应该去设计过于复杂的密码系统来保护价值不匹配的信息，好的密码系统复杂程度应该刚刚好。</li>
+<li>对安全性的信心要依据所建立的“种系”：对于一个密码协议或系统，攻破它的困难性应该归结于某个困难的数学问题</li>
+<li>实际效率：我们所说的数学问题应该是高效可解的，该问题能在问题规模的多项式时间内可解。</li>
+<li>采用实际的和可用的原型和服务：</li>
+<li>明确性：要明确所需要的所有假定，要明确所提供的确切的安全服务，要明确数学方面的一些特殊情况</li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>密码学基础</category>
+      </categories>
+      <tags>
+        <tag>密码学基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>公钥加密方案在选择密文攻击下的不可区分性</title>
     <url>/posts/20dbd7e1.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -743,6 +849,73 @@ Adv_{\mathcal{\Pi},\mathcal{A}}^{CCA}(\mathcal{A})=|Pr[\beta^{\prime}=\beta]-\fr
       </tags>
   </entry>
   <entry>
+    <title>区块链中的前沿技术</title>
+    <url>/posts/64d2edde.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="元宇宙"><a href="#元宇宙" class="headerlink" title="元宇宙"></a>元宇宙</h1><p><a href="https://www.bilibili.com/bangumi/play/ep682241?theme=movie&amp;spm_id_from=333.337.0.0">头号玩家：献给所有游戏玩家的一封情书</a></p>
+<p>在头号玩家中，令人惊叹的“绿洲”让人向往，那么这一世界是怎么实现的呢？这就体现区块链技术在另一个方向的发展：元宇宙。</p>
+<p>根据维基百科，Metaverse 被定义为“一个集体虚拟共享空间，由虚拟增强的物理现实和物理持久的虚拟空间融合而创造，包括所有虚拟世界、增强现实和互联网的总和。”</p>
+<p><strong>这是另一个与我们物理世界平行的虚拟世界——一个我们可以通过互联网和兼容的硬件设备自由访问的世界，并在其中进行互动。</strong></p>
+<p><strong>元宇宙是真实和虚拟之间的桥梁，可以扩展我们的视觉、声音和触觉，将数字物品融入物理世界，让我们随时进入完全沉浸式的3D 环境。</strong></p>
+<p>元宇宙虽然不像科幻小说和影视作品中描绘的那样奇幻，但却有可能成为新的计算平台和内容媒体，产生数万亿美元的价值。元宇宙确实可以作为网络功能的“继承者”——覆盖范围更大、花费的时间更长、商业活动更多——经济优势也有可能更大。</p>
+<p>更广泛地说，元宇宙<strong>将改变现代资源的分配和货币化方式。</strong>在元宇宙的模式下，居住在“一线发达市区”以外的潜在劳动力将通过虚拟劳动参与“高价值”经济。作为极具生命力的新事物，元宇宙源源不断地创造着新就业机会。</p>
+<p>元宇宙的应用和赛道实在是太多太多，目前主要存在四个大赛道：</p>
+<ul>
+<li>VR/AR等硬件设备</li>
+<li>游戏</li>
+<li>3D渲染等技术</li>
+<li>虚拟人</li>
+</ul>
+<p>发展挑战：</p>
+<ul>
+<li>知识产权，在某种程度上，元宇宙将颠覆原有的产权问题，随之而来的是一些新问题，比如信息景观和虚拟创造物是否有资格获得法律保护和所有权；建立在第三方信息底层的内容是否属于用户作品等。</li>
+<li>法律概念：元宇宙会带来对传统法律概念的改变。通过消除现实世界的物理性，元宇宙将我们人类社会从几个长期持有的法律概念中转移出来</li>
+</ul>
+<h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>一个非常有意思的新闻：</p>
+<p><a href="https://hypebeast.com/2021/8/stephen-curry-bored-ape-yacht-club-nft-55-ethereum-purchase"><a href="https://hypebeast.com/tags/steph-curry">Stephen Curry</a>最近刚刚花费 55 ETH（约合 180,000 美元）购买了<a href="https://hypebeast.com/tags/bored-ape-yacht-club">Bored Ape Yacht Club</a> NFT。</a></p>
+<p>如今，NFT 应用的用例十分广泛，包括：收藏品、游戏、艺术、虚拟资产、现实世界资产代币化等等。NFT 还能灵活地存储、控制和保护与个人身份相关信息。</p>
+<p>那么，NFT 到底是什么？</p>
+<p>NFT，全称为Non-Fungible Token，指非同质化代币，是用于表示数字资产（包括jpg和视频剪辑形式）的唯一加密货币令牌。现实世界中，不存在表现出完全相似特征或价值的两种商品，所以被称为非同质化货物，即指唯一的、无法替代的商品。</p>
+<p>现实世界中，真实资产拥有所有权证书，同样，在区块链世界中，NFT 代币可以保持所有权记录和真实性证明。</p>
+<p>每个NFT 之间无论是价值还是属性都各不相同。每个代币都有区别于其他代币的数字哈希值；因此，NFT 可以作为出处证明。NFT的价值：它不仅能证明原创艺术品和游戏代币等知识产权的所有权和真实性，还能代表股票、房地产等实际资产。在游戏和藏品领域，NFT 也被称为数字藏品。 </p>
+<p>在现有的市场中，NFT的产品包括：收藏品，游戏资产，虚拟世界，加密艺术品，金融，功能型NFT等。</p>
+<p>例如：游戏NFT，加密猫<a href="https://www.cryptokitties.co/?startMeow=visible">https://www.cryptokitties.co/?startMeow=visible</a></p>
+<p>一款基于以太坊开发的NFT资产类游戏，每个NFT，也就是每只猫都有不同的属性，玩家购买NFT后，就可以开始小猫繁殖的游戏。</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202312040931185.png" alt="image-20231204093130904"></p>
+<p>孵化出来的小猫的基因一部分遗传自上一代，一部分随机生成，孵化的小猫卖出变现，实现在游戏中边玩边赚。简单来说，就是电子养猫，每只猫都有一定的价值。</p>
+<p>在最开始的时候，CryptoKitties最初构想是通过游戏，让普通用户了解什么是区块链及加密货币。这是一个很好的出发点。游戏2017年上线，架设在以太坊网络上，当时年初以太坊价格才几十美元，年底涨到最高800多美元，当时用以太坊作为手续费，玩家还可以接受。现在以太坊价格已经涨到3k多美元，每次交易手续费就是挺大的成本了。</p>
+<p>另一方面，它的价格波动也出现了传统加密货币的毛病：</p>
+<p>在2017年顶峰的日活超过1.4万，然后刺激了区块链游戏赛道的发展（投资），这一度让CryptoKitties价格水涨船高。然而，在2018年，大量资本退出区块链市场，这个价格也达到很低。在最近几年，随着牛市以及NFT概念的火爆，CryptoKitties再度翻红。可以说，这种畸形的价格波动是NFT乃至加密货币市场存在的一个巨大问题。</p>
+<h1 id="DeFi"><a href="#DeFi" class="headerlink" title="DeFi"></a>DeFi</h1><p>DeFi，去中心化金融，是与传统的金融机构以及工作原理所相反的一种经济方式。</p>
+<p>传统的银行，作为金融业的巨头，为个人、企业、其它金融机构甚至政府提供便捷的支付、储蓄与信贷等服务。在全球前十大银行中，它们的市值加起来高达2万亿美元。</p>
+<p>虽然银行毫无疑问成为社会中最重要的支柱，但是，银行是由人来管理并会受政策监管，因而容易遭受与人相关的风险，比如管理不善和腐败。DeFi试图利用新兴的互联网和区块链技术创建一个更好的金融环境，它对传统的银行系统的三个关键部分进行了优化：</p>
+<ol>
+<li>支付和清算：传统的转账，当你在国内想要给国外的人支付一笔费用，这通常包含三种手续费：你的银行汇率，国际电汇汇出手续费以及国际电汇汇入手续费，并且正常的银行系统需要几个工作日才能处理完这笔交易。在DeFi中，加密货币允许你绕过转账过程中撷取大份额利润的中间人，这不仅能够节省大量时间，（通常一笔交易只需要15s到5min），而且还只需要很少的手续费。</li>
+<li>可获取性：现实中可能大部分人都有一个自己的银行账户，但是根据世界银行估计，全世界大约有17亿人，其中大部分来自于发展中国家，没有在金融机构持有账户，主要原因包括：贫穷，地理位置和信任问题。在DeFi中，代表着一场旨在推行无国界、无审查、无障碍金融产品的运动。DeFi协议不会歧视任何人，而且会为每个人营造公平的参与环境。</li>
+<li>中心化和透明度：银行是导致金融体系崩溃的中心节点之一，让权力和资金集中于银行手中是十分危险的。透明度也与此紧密相关——普通投资者无法充分了解金融机构的运作。DeFi在这方面会有所不同。建立在公共区块链（如以太坊）上的DeFi协议大都是开源的，便于审计和提升透明度。这些协议通常会有去中心化的治理组织来确保每个人都清楚发生了什么，并确保没有恶意行为者能够单独地做出恶意决策。</li>
+</ol>
+<p>去中心化金融（DeFi）是一场能够让用户在无需依靠中心化实体的情况下使用诸如借贷和交易等金融服务的运动。DeFi不是单个产品或公司，而是一系列替代银行、保险、债券和货币市场等机构的产品和服务。</p>
+<h1 id="跨链"><a href="#跨链" class="headerlink" title="跨链"></a>跨链</h1><p>跨链是目前区块链最前沿的技术，也是未来发展的重要方向之一</p>
+<p>当前的区块链底层技术平台百花齐放，不同的业务、不同的技术底层的区块链之间缺乏统一的互联互通的机制，这极大限制了区块链技术和应用生态的健康发展。这也是跨链技术产生的原因。</p>
+<p>简单来说，由于每个区块链都有其自己的规则和机制，不同的区块链之间通常就缺乏跨链通讯机制，例如你不能简单地在以太坊（Ethereum）上的DeFi平台直接使用比特币（Bitcoin）。 但是，你可以想象不同的区块链网络为不同的国家，而跨链就是在着些国家当中建立桥梁，隧道等通道。</p>
+<p><strong>跨链技术本质上是⼀种将A链上的数据D（或信息I，或消息M）安全可信地转移到B链并在B链上产生预期效果的⼀种技术。</strong>因为区块链系统本来就是⼀种特殊的分布式账簿数据库系统，所以这个转移的数据，最常见的就是资产的数据，如代币余额。</p>
+<p>目前主流的跨链技术为：公证人机制、哈希锁定、侧链&amp;中继链。目前最有名的跨链项⽬有Cosmos和Polkadot，两者采⽤的都是基于中继链的多链多层架构。</p>
+<p>针对一项技术，尤其是这种设计多个区块链，影响价值巨大的技术，我们要考虑它的安全性问题。</p>
+<p>截至 2022 年第三季，针对跨链桥的攻击已有13 次，被偷取的加密货币折合总值约20亿美元。资料来源：<a href="https://blog.chainalysis.com/reports/cross-chain-bridge-hacks-2022/">Chainalysis</a>.</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202312040946062.png" alt="image-20231204094613983"></p>
+<p>跨链桥的安全问题，关键之一在于跨链桥的信任机制，特别是跨链桥上交易和资产托管（custodian）的验证过程。</p>
+<p>跨链桥的信任机制设计各有不同。当中一种常见的跨链桥类型是中心化（centralised）的跨链桥。中心化跨链桥依赖一小群组织或机构来验证交易、并充当跨链资产的保管人（custodian）。保管人负责在涉及的区块链上确认用户有存入代币，负责进行锁定代币和铸造代币等操作。这种设计往往造成单点故障（single point of failure）的情况，容易出现漏洞和风险。</p>
+<p>但是，随着区块链逐渐向多链并行的方向发展，跨链解决方案打通不同区块链生态系统，显然可以为整体区块链生态提升应用价值。对用户而言，跨链技术可以让“各自为政”的区块链可以互联互通，自然可以让用户扩大手上加密货币资产的价值。毕竟，价值不是一潭死水，只有流通的价值才可以创造出更多的价值</p>
+]]></content>
+      <categories>
+        <category>区块链</category>
+      </categories>
+      <tags>
+        <tag>区块链</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>区块链中的密码学</title>
     <url>/posts/9b221d34.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -807,73 +980,6 @@ y^2 = x^3 +ax+b (\mod p)</script><p>其中$a,b,x,y \in GF(p), 4a^3+27b^2 \ne 0, 
 ]]></content>
       <categories>
         <category>密码学基础</category>
-      </categories>
-      <tags>
-        <tag>区块链</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>区块链中的前沿技术</title>
-    <url>/posts/64d2edde.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<h1 id="元宇宙"><a href="#元宇宙" class="headerlink" title="元宇宙"></a>元宇宙</h1><p><a href="https://www.bilibili.com/bangumi/play/ep682241?theme=movie&amp;spm_id_from=333.337.0.0">头号玩家：献给所有游戏玩家的一封情书</a></p>
-<p>在头号玩家中，令人惊叹的“绿洲”让人向往，那么这一世界是怎么实现的呢？这就体现区块链技术在另一个方向的发展：元宇宙。</p>
-<p>根据维基百科，Metaverse 被定义为“一个集体虚拟共享空间，由虚拟增强的物理现实和物理持久的虚拟空间融合而创造，包括所有虚拟世界、增强现实和互联网的总和。”</p>
-<p><strong>这是另一个与我们物理世界平行的虚拟世界——一个我们可以通过互联网和兼容的硬件设备自由访问的世界，并在其中进行互动。</strong></p>
-<p><strong>元宇宙是真实和虚拟之间的桥梁，可以扩展我们的视觉、声音和触觉，将数字物品融入物理世界，让我们随时进入完全沉浸式的3D 环境。</strong></p>
-<p>元宇宙虽然不像科幻小说和影视作品中描绘的那样奇幻，但却有可能成为新的计算平台和内容媒体，产生数万亿美元的价值。元宇宙确实可以作为网络功能的“继承者”——覆盖范围更大、花费的时间更长、商业活动更多——经济优势也有可能更大。</p>
-<p>更广泛地说，元宇宙<strong>将改变现代资源的分配和货币化方式。</strong>在元宇宙的模式下，居住在“一线发达市区”以外的潜在劳动力将通过虚拟劳动参与“高价值”经济。作为极具生命力的新事物，元宇宙源源不断地创造着新就业机会。</p>
-<p>元宇宙的应用和赛道实在是太多太多，目前主要存在四个大赛道：</p>
-<ul>
-<li>VR/AR等硬件设备</li>
-<li>游戏</li>
-<li>3D渲染等技术</li>
-<li>虚拟人</li>
-</ul>
-<p>发展挑战：</p>
-<ul>
-<li>知识产权，在某种程度上，元宇宙将颠覆原有的产权问题，随之而来的是一些新问题，比如信息景观和虚拟创造物是否有资格获得法律保护和所有权；建立在第三方信息底层的内容是否属于用户作品等。</li>
-<li>法律概念：元宇宙会带来对传统法律概念的改变。通过消除现实世界的物理性，元宇宙将我们人类社会从几个长期持有的法律概念中转移出来</li>
-</ul>
-<h1 id="NFT"><a href="#NFT" class="headerlink" title="NFT"></a>NFT</h1><p>一个非常有意思的新闻：</p>
-<p><a href="https://hypebeast.com/2021/8/stephen-curry-bored-ape-yacht-club-nft-55-ethereum-purchase"><a href="https://hypebeast.com/tags/steph-curry">Stephen Curry</a>最近刚刚花费 55 ETH（约合 180,000 美元）购买了<a href="https://hypebeast.com/tags/bored-ape-yacht-club">Bored Ape Yacht Club</a> NFT。</a></p>
-<p>如今，NFT 应用的用例十分广泛，包括：收藏品、游戏、艺术、虚拟资产、现实世界资产代币化等等。NFT 还能灵活地存储、控制和保护与个人身份相关信息。</p>
-<p>那么，NFT 到底是什么？</p>
-<p>NFT，全称为Non-Fungible Token，指非同质化代币，是用于表示数字资产（包括jpg和视频剪辑形式）的唯一加密货币令牌。现实世界中，不存在表现出完全相似特征或价值的两种商品，所以被称为非同质化货物，即指唯一的、无法替代的商品。</p>
-<p>现实世界中，真实资产拥有所有权证书，同样，在区块链世界中，NFT 代币可以保持所有权记录和真实性证明。</p>
-<p>每个NFT 之间无论是价值还是属性都各不相同。每个代币都有区别于其他代币的数字哈希值；因此，NFT 可以作为出处证明。NFT的价值：它不仅能证明原创艺术品和游戏代币等知识产权的所有权和真实性，还能代表股票、房地产等实际资产。在游戏和藏品领域，NFT 也被称为数字藏品。 </p>
-<p>在现有的市场中，NFT的产品包括：收藏品，游戏资产，虚拟世界，加密艺术品，金融，功能型NFT等。</p>
-<p>例如：游戏NFT，加密猫<a href="https://www.cryptokitties.co/?startMeow=visible">https://www.cryptokitties.co/?startMeow=visible</a></p>
-<p>一款基于以太坊开发的NFT资产类游戏，每个NFT，也就是每只猫都有不同的属性，玩家购买NFT后，就可以开始小猫繁殖的游戏。</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202312040931185.png" alt="image-20231204093130904"></p>
-<p>孵化出来的小猫的基因一部分遗传自上一代，一部分随机生成，孵化的小猫卖出变现，实现在游戏中边玩边赚。简单来说，就是电子养猫，每只猫都有一定的价值。</p>
-<p>在最开始的时候，CryptoKitties最初构想是通过游戏，让普通用户了解什么是区块链及加密货币。这是一个很好的出发点。游戏2017年上线，架设在以太坊网络上，当时年初以太坊价格才几十美元，年底涨到最高800多美元，当时用以太坊作为手续费，玩家还可以接受。现在以太坊价格已经涨到3k多美元，每次交易手续费就是挺大的成本了。</p>
-<p>另一方面，它的价格波动也出现了传统加密货币的毛病：</p>
-<p>在2017年顶峰的日活超过1.4万，然后刺激了区块链游戏赛道的发展（投资），这一度让CryptoKitties价格水涨船高。然而，在2018年，大量资本退出区块链市场，这个价格也达到很低。在最近几年，随着牛市以及NFT概念的火爆，CryptoKitties再度翻红。可以说，这种畸形的价格波动是NFT乃至加密货币市场存在的一个巨大问题。</p>
-<h1 id="DeFi"><a href="#DeFi" class="headerlink" title="DeFi"></a>DeFi</h1><p>DeFi，去中心化金融，是与传统的金融机构以及工作原理所相反的一种经济方式。</p>
-<p>传统的银行，作为金融业的巨头，为个人、企业、其它金融机构甚至政府提供便捷的支付、储蓄与信贷等服务。在全球前十大银行中，它们的市值加起来高达2万亿美元。</p>
-<p>虽然银行毫无疑问成为社会中最重要的支柱，但是，银行是由人来管理并会受政策监管，因而容易遭受与人相关的风险，比如管理不善和腐败。DeFi试图利用新兴的互联网和区块链技术创建一个更好的金融环境，它对传统的银行系统的三个关键部分进行了优化：</p>
-<ol>
-<li>支付和清算：传统的转账，当你在国内想要给国外的人支付一笔费用，这通常包含三种手续费：你的银行汇率，国际电汇汇出手续费以及国际电汇汇入手续费，并且正常的银行系统需要几个工作日才能处理完这笔交易。在DeFi中，加密货币允许你绕过转账过程中撷取大份额利润的中间人，这不仅能够节省大量时间，（通常一笔交易只需要15s到5min），而且还只需要很少的手续费。</li>
-<li>可获取性：现实中可能大部分人都有一个自己的银行账户，但是根据世界银行估计，全世界大约有17亿人，其中大部分来自于发展中国家，没有在金融机构持有账户，主要原因包括：贫穷，地理位置和信任问题。在DeFi中，代表着一场旨在推行无国界、无审查、无障碍金融产品的运动。DeFi协议不会歧视任何人，而且会为每个人营造公平的参与环境。</li>
-<li>中心化和透明度：银行是导致金融体系崩溃的中心节点之一，让权力和资金集中于银行手中是十分危险的。透明度也与此紧密相关——普通投资者无法充分了解金融机构的运作。DeFi在这方面会有所不同。建立在公共区块链（如以太坊）上的DeFi协议大都是开源的，便于审计和提升透明度。这些协议通常会有去中心化的治理组织来确保每个人都清楚发生了什么，并确保没有恶意行为者能够单独地做出恶意决策。</li>
-</ol>
-<p>去中心化金融（DeFi）是一场能够让用户在无需依靠中心化实体的情况下使用诸如借贷和交易等金融服务的运动。DeFi不是单个产品或公司，而是一系列替代银行、保险、债券和货币市场等机构的产品和服务。</p>
-<h1 id="跨链"><a href="#跨链" class="headerlink" title="跨链"></a>跨链</h1><p>跨链是目前区块链最前沿的技术，也是未来发展的重要方向之一</p>
-<p>当前的区块链底层技术平台百花齐放，不同的业务、不同的技术底层的区块链之间缺乏统一的互联互通的机制，这极大限制了区块链技术和应用生态的健康发展。这也是跨链技术产生的原因。</p>
-<p>简单来说，由于每个区块链都有其自己的规则和机制，不同的区块链之间通常就缺乏跨链通讯机制，例如你不能简单地在以太坊（Ethereum）上的DeFi平台直接使用比特币（Bitcoin）。 但是，你可以想象不同的区块链网络为不同的国家，而跨链就是在着些国家当中建立桥梁，隧道等通道。</p>
-<p><strong>跨链技术本质上是⼀种将A链上的数据D（或信息I，或消息M）安全可信地转移到B链并在B链上产生预期效果的⼀种技术。</strong>因为区块链系统本来就是⼀种特殊的分布式账簿数据库系统，所以这个转移的数据，最常见的就是资产的数据，如代币余额。</p>
-<p>目前主流的跨链技术为：公证人机制、哈希锁定、侧链&amp;中继链。目前最有名的跨链项⽬有Cosmos和Polkadot，两者采⽤的都是基于中继链的多链多层架构。</p>
-<p>针对一项技术，尤其是这种设计多个区块链，影响价值巨大的技术，我们要考虑它的安全性问题。</p>
-<p>截至 2022 年第三季，针对跨链桥的攻击已有13 次，被偷取的加密货币折合总值约20亿美元。资料来源：<a href="https://blog.chainalysis.com/reports/cross-chain-bridge-hacks-2022/">Chainalysis</a>.</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202312040946062.png" alt="image-20231204094613983"></p>
-<p>跨链桥的安全问题，关键之一在于跨链桥的信任机制，特别是跨链桥上交易和资产托管（custodian）的验证过程。</p>
-<p>跨链桥的信任机制设计各有不同。当中一种常见的跨链桥类型是中心化（centralised）的跨链桥。中心化跨链桥依赖一小群组织或机构来验证交易、并充当跨链资产的保管人（custodian）。保管人负责在涉及的区块链上确认用户有存入代币，负责进行锁定代币和铸造代币等操作。这种设计往往造成单点故障（single point of failure）的情况，容易出现漏洞和风险。</p>
-<p>但是，随着区块链逐渐向多链并行的方向发展，跨链解决方案打通不同区块链生态系统，显然可以为整体区块链生态提升应用价值。对用户而言，跨链技术可以让“各自为政”的区块链可以互联互通，自然可以让用户扩大手上加密货币资产的价值。毕竟，价值不是一潭死水，只有流通的价值才可以创造出更多的价值</p>
-]]></content>
-      <categories>
-        <category>区块链</category>
       </categories>
       <tags>
         <tag>区块链</tag>
@@ -1398,31 +1504,6 @@ Z/nZ = \lbrace x+nZ|x\in Z\rbrace</script><p><strong>定义9：</strong>群元�
       </tags>
   </entry>
   <entry>
-    <title>数据完整性</title>
-    <url>/posts/86c8c9d8.html</url>
-    <content><![CDATA[<h1 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h1><p>我们需要一种机制，使得到消息的接收者可以验证该消息确实是来自所声称的消息源，且在传输的过程中未受到未授权方式修改。<strong>数据完整性</strong>就是抗击对消息未授权修改的安全服务。</p>
-<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p><strong>数据完整性保护</strong> 设Data为任意信息，$Ke$未编码密钥，$Kv$为与该编码密钥相匹配的验证密钥。Data的数据完整性保护如下：检测码的生成：$MDC\larr f(Ke,Data)$</p>
-<p>检测码的验证：</p>
-<script type="math/tex; mode=display">
-G(Kv,Data,MDC)=
-\begin {cases}
-True,MDC=f(Ke,Data) \\
-False ,MDC≠f(Ke,Data)
-\end {cases}</script><p>其中f和g都是有效的密码变换：前者由一个辅助输入Ke参数化，后者由任意输入Kv参数化、</p>
-<h1 id="对称技术"><a href="#对称技术" class="headerlink" title="对称技术"></a>对称技术</h1><p>在实现数据完整性的对称技术中，密码变换f和g是对称密码算法，这意味着$f=g,Ke=Kv$。</p>
-<h2 id="密码杂凑函数"><a href="#密码杂凑函数" class="headerlink" title="密码杂凑函数"></a>密码杂凑函数</h2><p>实现MAC通常的方法时使用密钥<strong>杂凑函数</strong>技术。</p>
-<p>杂凑函数是一个确定的函数，它将任意长的比特串映射为定长比特串的杂凑值。设$h$为一个杂凑函数，其固定的输出长度用$\vert h \vert$，它有以下的性质：</p>
-<ul>
-<li><p>混合变换，对于任意的输入$x$，输出的杂凑值$h(x)$应当和区间$[0,2^{\vert h \vert}]$中均匀的二进制串在计算上是不可区分的。</p>
-</li>
-<li><p>抗碰撞攻击，输入$x,y,x≠y$，使得$h(x)=h(y)$在计算上应当是不可行的。</p>
-</li>
-<li>抗原像攻击，已知一个杂凑值$h$，找一个输入串$x$，使得$h=h(x)$，在计算上是不可行的。</li>
-<li>实用有效性，给定一个输入串$x$，$h(x)$的计算可以在关于$x$的长度规模的低阶多项式时间内完成。</li>
-</ul>
-<h3 id="杂凑函数在密码学中的应用"><a href="#杂凑函数在密码学中的应用" class="headerlink" title="杂凑函数在密码学中的应用"></a>杂凑函数在密码学中的应用</h3>]]></content>
-  </entry>
-  <entry>
     <title>数学基础</title>
     <url>/posts/e403a46.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -1488,6 +1569,31 @@ False ,MDC≠f(Ke,Data)
       <tags>
         <tag>数学</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据完整性</title>
+    <url>/posts/86c8c9d8.html</url>
+    <content><![CDATA[<h1 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h1><p>我们需要一种机制，使得到消息的接收者可以验证该消息确实是来自所声称的消息源，且在传输的过程中未受到未授权方式修改。<strong>数据完整性</strong>就是抗击对消息未授权修改的安全服务。</p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p><strong>数据完整性保护</strong> 设Data为任意信息，$Ke$未编码密钥，$Kv$为与该编码密钥相匹配的验证密钥。Data的数据完整性保护如下：检测码的生成：$MDC\larr f(Ke,Data)$</p>
+<p>检测码的验证：</p>
+<script type="math/tex; mode=display">
+G(Kv,Data,MDC)=
+\begin {cases}
+True,MDC=f(Ke,Data) \\
+False ,MDC≠f(Ke,Data)
+\end {cases}</script><p>其中f和g都是有效的密码变换：前者由一个辅助输入Ke参数化，后者由任意输入Kv参数化、</p>
+<h1 id="对称技术"><a href="#对称技术" class="headerlink" title="对称技术"></a>对称技术</h1><p>在实现数据完整性的对称技术中，密码变换f和g是对称密码算法，这意味着$f=g,Ke=Kv$。</p>
+<h2 id="密码杂凑函数"><a href="#密码杂凑函数" class="headerlink" title="密码杂凑函数"></a>密码杂凑函数</h2><p>实现MAC通常的方法时使用密钥<strong>杂凑函数</strong>技术。</p>
+<p>杂凑函数是一个确定的函数，它将任意长的比特串映射为定长比特串的杂凑值。设$h$为一个杂凑函数，其固定的输出长度用$\vert h \vert$，它有以下的性质：</p>
+<ul>
+<li><p>混合变换，对于任意的输入$x$，输出的杂凑值$h(x)$应当和区间$[0,2^{\vert h \vert}]$中均匀的二进制串在计算上是不可区分的。</p>
+</li>
+<li><p>抗碰撞攻击，输入$x,y,x≠y$，使得$h(x)=h(y)$在计算上应当是不可行的。</p>
+</li>
+<li>抗原像攻击，已知一个杂凑值$h$，找一个输入串$x$，使得$h=h(x)$，在计算上是不可行的。</li>
+<li>实用有效性，给定一个输入串$x$，$h(x)$的计算可以在关于$x$的长度规模的低阶多项式时间内完成。</li>
+</ul>
+<h3 id="杂凑函数在密码学中的应用"><a href="#杂凑函数在密码学中的应用" class="headerlink" title="杂凑函数在密码学中的应用"></a>杂凑函数在密码学中的应用</h3>]]></content>
   </entry>
   <entry>
     <title>数论基础</title>
@@ -2382,6 +2488,32 @@ Adv_{\mathcal{\Pi},\mathcal{A}}^{CPA}(\mathcal{K})=|Pr[Exp_{\mathcal{\Pi},\mathc
       </tags>
   </entry>
   <entry>
+    <title>零知识证明zk-SNARKs</title>
+    <url>/posts/6c3f0187.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<p>本文介绍经典零只是证明协议——zk-SNARKs</p>
+<span id="more"></span>
+<h1 id="zk-SNARK-算法简介"><a href="#zk-SNARK-算法简介" class="headerlink" title="zk-SNARK 算法简介"></a>zk-SNARK 算法简介</h1><p>zk-SNARK 是 <strong>zero-knowledge succint non-interactive arguments of knowledge</strong> 的简称，其中：</p>
+<p>非交互指的是 Prover 和 Ver­i­fier 之间可以不进行任何的交互（P 和 V 来回发送消息）</p>
+<p>零知识允许 Prover 向 Ver­i­fier 证明一项陈述为真，而不泄露除了该陈述为真以外的任何有效的信息（比如给定一个随机数的散列，Prover 可以向 Ver­i­fier 证明其知道这个随机数而不透露这个数）</p>
+<p>简洁则意味着证明可以在短时间内完成（比如毫秒级别的时间），即便对于非常大的陈述而言证明也是非常快的，且不需要太多的通信量（仅需要几百字节）</p>
+<p>因为以往的交互式证明系统中 P 和 V 需要互相发送消息，甚至为了降低合理性错误需要很多的交互轮次，从而导致通信量急剧增加，而非交互的简洁的结构中，P 可以仅向 V 发送一个包含少量自己的消息就可以完成验证，为了做到这种短到足以让其发布到区块链上的非交互式的证明，目前采用的方法是 P 和 V 之间生成一个 CRS 并将其作为公共参数（参见之前的文章），从而完成证明。</p>
+<h1 id="zk-SNARKs的构建方式"><a href="#zk-SNARKs的构建方式" class="headerlink" title="zk-SNARKs的构建方式"></a>zk-SNARKs的构建方式</h1><p>zk-SNARKs 先将需要证明的内容转化为一系列代数方程的解的形式，具体而言是先将计算转化为算术电路，再到 R1CS，QAP，最后到 zk-SNARKs</p>
+<p>在这个过程中，需要将验证交易合法性的函数转化为一个数学表达式，第一步是将逻辑步骤分解为尽可能小的操作，即创建一个算术电路，这和布尔电路类似（程序被编译为离散的单个步骤，如 AND、OR、NOT 等），转换为算术电路后，函数就分解为加减乘除等基本算术运算（特殊情况下会尽可能避免除法，或直接不使用除法）</p>
+<p>比如说想要计算表达式$(a+b)<em>(b</em>c)$，转化为下面这个算术电路</p>
+<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202308081647436.png" alt="img"></p>
+<p>上述电路中各个输入按照表达式经过对应的门，最终达到输出，接下来是建立一阶约束系统（R1CS），以检查值是否正确的经过了应当经过的门，比如在上述例子中，R1CS 会检查 Gate2 的输出是否是$b*c$</p>
+<p>在 R1CS 中，Ver­i­fier 必须检查许多约束条件（几乎电路中的每一个路径都有一个约束条件），然后是将所有的约束条件捆绑在一起</p>
+]]></content>
+      <categories>
+        <category>零知识证明</category>
+      </categories>
+      <tags>
+        <tag>零知识证明</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>零知识证明</title>
     <url>/posts/63b33bfc.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
@@ -2530,32 +2662,6 @@ Adv_{\mathcal{\Pi},\mathcal{A}}^{CPA}(\mathcal{K})=|Pr[Exp_{\mathcal{\Pi},\mathc
       </categories>
       <tags>
         <tag>非对称密码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>零知识证明zk-SNARKs</title>
-    <url>/posts/6c3f0187.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-
-<p>本文介绍经典零只是证明协议——zk-SNARKs</p>
-<span id="more"></span>
-<h1 id="zk-SNARK-算法简介"><a href="#zk-SNARK-算法简介" class="headerlink" title="zk-SNARK 算法简介"></a>zk-SNARK 算法简介</h1><p>zk-SNARK 是 <strong>zero-knowledge succint non-interactive arguments of knowledge</strong> 的简称，其中：</p>
-<p>非交互指的是 Prover 和 Ver­i­fier 之间可以不进行任何的交互（P 和 V 来回发送消息）</p>
-<p>零知识允许 Prover 向 Ver­i­fier 证明一项陈述为真，而不泄露除了该陈述为真以外的任何有效的信息（比如给定一个随机数的散列，Prover 可以向 Ver­i­fier 证明其知道这个随机数而不透露这个数）</p>
-<p>简洁则意味着证明可以在短时间内完成（比如毫秒级别的时间），即便对于非常大的陈述而言证明也是非常快的，且不需要太多的通信量（仅需要几百字节）</p>
-<p>因为以往的交互式证明系统中 P 和 V 需要互相发送消息，甚至为了降低合理性错误需要很多的交互轮次，从而导致通信量急剧增加，而非交互的简洁的结构中，P 可以仅向 V 发送一个包含少量自己的消息就可以完成验证，为了做到这种短到足以让其发布到区块链上的非交互式的证明，目前采用的方法是 P 和 V 之间生成一个 CRS 并将其作为公共参数（参见之前的文章），从而完成证明。</p>
-<h1 id="zk-SNARKs的构建方式"><a href="#zk-SNARKs的构建方式" class="headerlink" title="zk-SNARKs的构建方式"></a>zk-SNARKs的构建方式</h1><p>zk-SNARKs 先将需要证明的内容转化为一系列代数方程的解的形式，具体而言是先将计算转化为算术电路，再到 R1CS，QAP，最后到 zk-SNARKs</p>
-<p>在这个过程中，需要将验证交易合法性的函数转化为一个数学表达式，第一步是将逻辑步骤分解为尽可能小的操作，即创建一个算术电路，这和布尔电路类似（程序被编译为离散的单个步骤，如 AND、OR、NOT 等），转换为算术电路后，函数就分解为加减乘除等基本算术运算（特殊情况下会尽可能避免除法，或直接不使用除法）</p>
-<p>比如说想要计算表达式$(a+b)<em>(b</em>c)$，转化为下面这个算术电路</p>
-<p><img src="https://gitee.com/jia-huaiyu/images/raw/master/202308081647436.png" alt="img"></p>
-<p>上述电路中各个输入按照表达式经过对应的门，最终达到输出，接下来是建立一阶约束系统（R1CS），以检查值是否正确的经过了应当经过的门，比如在上述例子中，R1CS 会检查 Gate2 的输出是否是$b*c$</p>
-<p>在 R1CS 中，Ver­i­fier 必须检查许多约束条件（几乎电路中的每一个路径都有一个约束条件），然后是将所有的约束条件捆绑在一起</p>
-]]></content>
-      <categories>
-        <category>零知识证明</category>
-      </categories>
-      <tags>
-        <tag>零知识证明</tag>
       </tags>
   </entry>
   <entry>
